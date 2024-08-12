@@ -1,0 +1,10 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="cta-arrow" clip-path="url(#clip0_2881_11701)">
+<path id="Vector" d="M2.44104 6.53639C3.94345 7.71672 5.44586 9.01508 6.76335 11.1633V0.799999L9.21343 0.799999V11.1633C10.5309 9.03869 12.0565 7.71672 13.5589 6.53639L15.2 8.56656C13.0504 10.337 10.9239 12.2492 9.25966 15.2H6.71712C5.05292 12.2492 2.94955 10.337 0.799952 8.56656L2.44104 6.53639Z" fill="#031F39"/>
+</g>
+<defs>
+<clipPath id="clip0_2881_11701">
+<rect width="16" height="16" fill="white" transform="matrix(0 1 -1 0 16 0)"/>
+</clipPath>
+</defs>
+</svg>
