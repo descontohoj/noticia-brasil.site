@@ -1484,29 +1484,6 @@ Shopify.routes.root = "/";</script>
       <!-- ESTRELAS APP DE REVIEW -->
       
 
-<!-- Novo Código Atualizado -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Seleciona o botão de adicionar ao carrinho dentro do sticky form
-    const stickyButton = document.querySelector('.product-sticky-form__form #StickyAddToCart');
-    
-    if (stickyButton) {
-      stickyButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Previne o comportamento padrão do botão
-        
-        // Captura os parâmetros UTM da URL atual
-        var utms = document.location.search.replace('?', '');
-        
-        // Constrói a URL de redirecionamento com os parâmetros UTM
-        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
-        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
-        
-        // Redireciona para a URL desejada
-        window.location.href = finalUrl;
-      });
-    }
-  });
-</script>
 
     
 
