@@ -2409,7 +2409,142 @@ Shopify.routes.root = "/";</script>
 
 
 
+<!-- start vega utm script -->
+<div id='foxScriptUtm'>
+    <script>
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var utmParams = {
+            src: url.searchParams.get('src'),
+            utm_source: url.searchParams.get('utm_source'),
+            utm_medium: url.searchParams.get('utm_medium'),
+            utm_campaign: url.searchParams.get('utm_campaign'),
+            utm_term: url.searchParams.get('utm_term'),
+            utm_content: url.searchParams.get('utm_content')
+        }
+        var cookieValue = '';
+        Object.keys(utmParams).forEach(function(key) {
+            if(utmParams[key]){
+                if(cookieValue) {
+                    cookieValue += '|';
+                }
+                cookieValue += key + '=' + utmParams[key];
+            }
+        });
 
+        if(cookieValue) {
+            var cookieName = '_sirius_track';
+            var myDate = new Date();
+            myDate.setMonth(myDate.getMonth() + 12);
+
+            
+            document.cookie = cookieName +'=' + cookieValue + ';domain=.buscabusca-online.com;path=/;expires=' + myDate.toUTCString();
+        }
+    </script>
+</div>
+<!-- end vega utm script -->
+<!-- start vega cart script -->
+<div id="foxScriptCart">
+    <script defer>
+        function inArray(needle, haystack) {
+            var length = haystack.length;
+            for(var i = 0; i < length; i++) {
+                if(haystack[i] == needle) return true;
+            }
+            return false;
+        }
+
+        function setFormDataCloudfoxCheckout(method = "POST") {
+            
+            const urlCloudfoxCheckout = 'https://pay.buscabusca-online.com';
+            let form = document.querySelector(`form[action="${urlCloudfoxCheckout}"]`);
+
+            if(form === null) {
+                form = document.querySelector('form[action="/cart"]');
+                form.setAttribute('action', urlCloudfoxCheckout);
+            }
+
+            if(!form.hasAttribute('method')) form.setAttribute('method', method);
+            if(!form.hasAttribute('novalidate')) form.setAttribute('novalidate','novalidate');
+            if(!form.hasAttribute('data-fox')) form.setAttribute('data-fox', 'cart-form');
+
+            return form;
+        }
+
+        function createInputDataFox(name, loopIndex, value, dataFoxNumber, type = 'hidden') {
+            const element = document.createElement('input');
+            element.setAttribute('type', type);
+            element.setAttribute('data-fox', dataFoxNumber);
+            element.setAttribute('name',`${name}${loopIndex}`);
+            element.setAttribute('value',`${value}`);
+
+            return element;
+        }
+
+        function submitCheckout(formElement) {
+            const themeName = "sabino-v5-nichado-2";
+            const theme = themeName.toLowerCase();
+            const divFoxData = document.createElement('div');
+            divFoxData.setAttribute('id', 'foxData');
+
+            if(theme == 'warehouse') {
+                
+            } else {
+                
+            }
+
+            // console.log(formElement);
+
+            const form = setFormDataCloudfoxCheckout();
+            form.appendChild(divFoxData);
+
+            console.log(form);
+
+            form.submit();
+        }
+
+        console.log('product');
+
+        let form = document.querySelector('form[action="/cart"]');
+        if(form !== null) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log(this);
+                submitCheckout(this);
+            });
+        }
+
+        // let buttonSubmit = document.querySelector('button[form="cart"][type="submit"]');
+        let buttonSubmit = document.querySelector('button[form]');
+        if(buttonSubmit !== null) {
+            buttonSubmit.addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log(form);
+                submitCheckout(form);
+            });
+        }
+    </script>
+</div>
+<!-- end vega cart script -->
+<!-- start vega skip to cart script -->
+
+<script>
+    if(document.querySelector('button[name="add"]')) {
+        let buyNowButton = document.querySelector('button[name="add"]');
+        buyNowButton.querySelector("span").innerText = 'Comprar Agora'
+    }
+
+    if(document.cookie.match(new RegExp('cart=([^;]+)')) && form !== null) {
+        document.getElementsByTagName('body').item(0).style.display = 'none';
+        var htmlData = "<div><style>@keyframes loader-circle{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.loader-container{height:100vh;text-align:center;padding-top:40vh}.loader{width:75px;height:75px;display:inline-block;border-top:solid #d3d3d3;border-right:solid #d3d3d3;border-bottom:solid #d3d3d3;border-left:solid #557b96;border-width:5px;border-radius:50%;animation:loader-circle 1.1s infinite linear}</style><div class='loader-container'><div class='loader'></div></div></div>";
+        document.getElementsByTagName('html').item(0).insertAdjacentHTML( 'beforeend', htmlData);
+        // document.querySelector('#cart_form').submit();
+        submitCheckout(form);
+        document.cookie = 'cart=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    }
+</script>
+
+<!-- end vega skip to cart script -->
 
 
 
