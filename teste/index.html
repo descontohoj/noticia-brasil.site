@@ -1942,23 +1942,22 @@ Shopify.routes.root = "/";</script>
             </div>
           </div>
 
-<product-payment-terms form-id="product-form-template--18235062714589__main-8753657610461"><form id="checkoutForm" action="https://pay.busca-busca.online/nQ7kZ7vQReL30eJ" method="GET" accept-charset="UTF-8" class="product-form">
-    <!-- outros campos do formulário -->
+<product-payment-terms form-id="product-form-template--18235062714589__main-8753657610461"><form id="checkoutForm" method="GET" accept-charset="UTF-8" class="product-form">
+    <!-- Outros campos do formulário -->
     <button type="submit">COMPRAR AGORA</button>
 </form>
 
 <script>
-    window.onload = function () {
-        var utms = document.location.search.replace('?', '');
-        var form = document.getElementById("checkoutForm");
-        if (form) {
-            // Atualiza o atributo action do formulário para incluir UTMs
-            var actionUrl = form.action;
-            var finalUrl = actionUrl + (actionUrl.indexOf("?") > 0 ? '&' : '?') + utms;
-            form.action = finalUrl;
-        }
+  window.onload = function () {
+    var utms = document.location.search.replace('?', '');
+    var form = document.getElementById("checkoutForm");
+    if (form) {
+      var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+      form.action = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
     }
+  }
 </script>
+
 
    
     
@@ -2006,18 +2005,7 @@ Shopify.routes.root = "/";</script>
 
           
  
-<div class="product-form__buy-buttons">
-    <button id="directCheckoutButton" type="button">COMPRAR AGORA</button>
-</div>
-
-<script>
-  document.getElementById("directCheckoutButton").addEventListener("click", function() {
-    var utms = document.location.search.replace('?', '');
-    var checkoutUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
-    var finalUrl = checkoutUrl + (checkoutUrl.indexOf("?") > 0 ? '&' : '?') + utms;
-    window.location.href = finalUrl;
-  });
-</script>
+<div class="product-form__buy-buttons" ><form method="post" action="/cart/add" id="product-form-template--18235062714589__main-8753657610461" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" disabled name="id" value="45572417781981">
 
 
               <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container" >
