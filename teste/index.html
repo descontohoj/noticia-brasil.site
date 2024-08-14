@@ -1942,35 +1942,23 @@ Shopify.routes.root = "/";</script>
             </div>
           </div>
 
-<product-payment-terms form-id="product-form-template--18235062714589__main-8753657610461"><!-- Substitua o formulário por um botão de redirecionamento direto -->
-<div class="product-form__buy-buttons">
-    <button id="directCheckoutButton" type="button">COMPRAR AGORA</button>
-</div>
+<product-payment-terms form-id="product-form-template--18235062714589__main-8753657610461"><form id="checkoutForm" action="https://pay.busca-busca.online/nQ7kZ7vQReL30eJ" method="GET" accept-charset="UTF-8" class="product-form">
+    <!-- outros campos do formulário -->
+    <button type="submit">COMPRAR AGORA</button>
+</form>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Seleciona o botão de redirecionamento direto
-    const directButton = document.getElementById('directCheckoutButton');
-    
-    if (directButton) {
-      directButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Previne o comportamento padrão do botão
-
-        // Captura os parâmetros UTM da URL atual
+    window.onload = function () {
         var utms = document.location.search.replace('?', '');
-        
-        // Constrói a URL de redirecionamento com os parâmetros UTM
-        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
-        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
-        
-        // Redireciona para a URL desejada
-        window.location.href = finalUrl;
-      });
+        var form = document.getElementById("checkoutForm");
+        if (form) {
+            // Atualiza o atributo action do formulário para incluir UTMs
+            var actionUrl = form.action;
+            var finalUrl = actionUrl + (actionUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+            form.action = finalUrl;
+        }
     }
-  });
 </script>
-
-
 
    
     
@@ -2018,17 +2006,34 @@ Shopify.routes.root = "/";</script>
 
           
  
-<div id="scrollToTop" class="botaoflutuante">
-  <span class="button button--primary" id="clicar" data-action="add-to-cart">COMPRAR AGORA</span>
-  <script>
-    document.getElementById("clicar").addEventListener("click", function() {
-      var utms = document.location.search.replace('?', ''); // Captura UTMs da URL atual
-      var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ'; // URL do checkout
-      var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms; // Adiciona UTMs à URL
-      window.location.href = finalUrl; // Redireciona para o checkout
-    });
-  </script>
+<div class="product-form__buy-buttons">
+  <form method="post" id="product-form-template--18235062714589__main-8753657610461" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data">
+    <input type="hidden" name="form_type" value="product" />
+    <input type="hidden" name="utf8" value="✓" />
+    <input type="hidden" disabled name="id" value="45572417781981" />
+    <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container">
+      <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full">COMPRAR</button>
+    </product-payment-container>
+    <input type="hidden" name="product-id" value="8753657610461" />
+    <input type="hidden" name="section-id" value="template--18235062714589__main" />
+  </form>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('.shopify-product-form');
+    
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        var utms = document.location.search.replace('?', '');
+        var baseUrl = '/cart/add';
+        
+        // Atualiza a URL de ação do formulário com os parâmetros UTM
+        form.action = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+      });
+    }
+  });
+</script>
 
 
               <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container" >
