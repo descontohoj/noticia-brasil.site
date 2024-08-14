@@ -1489,7 +1489,6 @@ Shopify.routes.root = "/";</script>
       
 
 <!-- Novo Código Adicionado -->
-<!-- BOTÃO FLUTUANTE -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Seleciona o botão de adicionar ao carrinho dentro do sticky form
@@ -1498,21 +1497,12 @@ Shopify.routes.root = "/";</script>
     if (stickyButton) {
       stickyButton.addEventListener('click', function(event) {
         event.preventDefault(); // Previne o comportamento padrão do botão
-        
-        // Captura os parâmetros UTM da URL atual
-        var utms = document.location.search.replace('?', '');
-        
-        // Constrói a URL de redirecionamento com os parâmetros UTM
-        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
-        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
-        
         // Redireciona para a URL desejada
-        window.location.href = finalUrl;
+        window.location.href = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
       });
     }
   });
 </script>
-
     
 
     <div class="product-meta__price-list-container" role="region" aria-live="polite">
@@ -1970,31 +1960,6 @@ Shopify.routes.root = "/";</script>
   });
 </script>
 
-   
-    
-
-    
-    
-  
-    
-    
-  
-   
-    
-  
-   
-    
-
- 
-    
-
-
-    
-
-
-    
-
-
     
 <div class="product-form__quantity" >
             <span class="product-form__quantity-label">Quantidade:</span>
@@ -2022,11 +1987,11 @@ Shopify.routes.root = "/";</script>
     <input type="hidden" name="utf8" value="✓" />
     <input type="hidden" disabled name="id" value="45572417781981">
 
-
-
-
-              <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container" >
-                <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full" >COMPRAR</button></product-payment-container><input type="hidden" name="product-id" value="8753657610461" /><input type="hidden" name="section-id" value="template--18235062714589__main" /></form></div><store-pickup form-id="product-form-template--18235062714589__main-8753657610461" class="product-form__store-availability-container"></store-pickup></div>
+    <!-- Botão de COMPRAR -->
+    <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full">COMPRAR</button>
+    
+  </form>
+</div><input type="hidden" name="product-id" value="8753657610461" /><input type="hidden" name="section-id" value="template--18235062714589__main" /></form></div><store-pickup form-id="product-form-template--18235062714589__main-8753657610461" class="product-form__store-availability-container"></store-pickup></div>
 
 
      
@@ -2502,7 +2467,7 @@ Shopify.routes.root = "/";</script>
 
         function setFormDataCloudfoxCheckout(method = "POST") {
             
-            const urlCloudfoxCheckout = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+            const urlCloudfoxCheckout = 'https://pay.buscabusca-online.com';
             let form = document.querySelector(`form[action="${urlCloudfoxCheckout}"]`);
 
             if(form === null) {
