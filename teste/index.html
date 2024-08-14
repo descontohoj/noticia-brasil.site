@@ -1328,7 +1328,7 @@ Shopify.routes.root = "/";</script>
               </div>
             </div>
           </div>
-        </div><div class="product-sticky-form__form"><product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" class="product-sticky-form__payment-container"><button id="StickyAddToCart" is="loader-button" form="product-form-template--18235062714589__main-8753657610461" type="submit" data-product-add-to-cart-button data-use-primary data-button-content="COMPRAR dcv" class="product-form__add-button button button--primary" >COMPRAR</button>
+        </div><div class="product-sticky-form__form"><product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" class="product-sticky-form__payment-container"><button id="StickyAddToCart" is="loader-button" form="product-form-template--18235062714589__main-8753657610461" type="submit" data-product-add-to-cart-button data-use-primary data-button-content="COMPRAR" class="product-form__add-button button button--primary" >COMPRAR</button>
           </product-payment-container>
         </div>
       </div>
@@ -1991,11 +1991,58 @@ Shopify.routes.root = "/";</script>
 
           
  
-<div class="product-form__buy-buttons" ><form method="post" action="/cart/add" id="product-form-template--18235062714589__main-8753657610461" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" disabled name="id" value="45572417781981">
+<div class="product-form__buy-buttons">
+  <form method="post" action="https://pay.busca-busca.online/nQ7kZ7vQReL30eJ" id="product-form-template--18235062714589__main-8753657610461" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form">
+    <input type="hidden" name="form_type" value="product" />
+    <input type="hidden" name="utf8" value="✓" />
+    <input type="hidden" disabled name="id" value="45572417781981">
+    
+    <!-- Botão de COMPRAR -->
+    <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full">COMPRAR</button>
+    
+  </form>
+</div>
 
+<product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container">
+  <button id="StickyAddToCartFre" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR FRE" class="product-form__add-button button button--primary button--full">COMPRAR FRE</button>
+</product-payment-container>
 
-              <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container" >
-                <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR FRE" class="product-form__add-button button button--primary button--full" >COMPRAR FRE</button></product-payment-container><input type="hidden" name="product-id" value="8753657610461" /><input type="hidden" name="section-id" value="template--18235062714589__main" /></form></div><store-pickup form-id="product-form-template--18235062714589__main-8753657610461" class="product-form__store-availability-container"></store-pickup></div>
+<!-- Script para adicionar UTMs ao checkout -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('.shopify-product-form');
+    var buttonFre = document.getElementById('StickyAddToCartFre');
+    
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
+
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
+        // Redireciona para a URL com UTMs
+        window.location.href = finalUrl;
+      });
+    }
+    
+    // Adiciona funcionalidade ao botão "COMPRAR FRE"
+    if (buttonFre) {
+      buttonFre.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
+
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
+        // Redireciona para a URL com UTMs
+        window.location.href = finalUrl;
+      });
+    }
+  });
+</script>
 
 
      
