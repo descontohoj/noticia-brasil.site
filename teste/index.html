@@ -1488,7 +1488,21 @@ Shopify.routes.root = "/";</script>
       <!-- ESTRELAS APP DE REVIEW -->
       
 
-
+<!-- Novo Código Adicionado -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona o botão de adicionar ao carrinho dentro do sticky form
+    const stickyButton = document.querySelector('.product-sticky-form__form #StickyAddToCart');
+    
+    if (stickyButton) {
+      stickyButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do botão
+        // Redireciona para a URL desejada
+        window.location.href = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+      });
+    }
+  });
+</script>
     
 
     <div class="product-meta__price-list-container" role="region" aria-live="polite">
@@ -1970,7 +1984,7 @@ Shopify.routes.root = "/";</script>
 
 
               <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container" >
-                <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full" >COMPRAR fvs </button></product-payment-container><input type="hidden" name="product-id" value="8753657610461" /><input type="hidden" name="section-id" value="template--18235062714589__main" /></form></div><store-pickup form-id="product-form-template--18235062714589__main-8753657610461" class="product-form__store-availability-container"></store-pickup></div>
+                <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full" >COMPRAR</button></product-payment-container><input type="hidden" name="product-id" value="8753657610461" /><input type="hidden" name="section-id" value="template--18235062714589__main" /></form></div><store-pickup form-id="product-form-template--18235062714589__main-8753657610461" class="product-form__store-availability-container"></store-pickup></div>
 
 
      
@@ -2399,6 +2413,8 @@ Shopify.routes.root = "/";</script>
 
 
 
+
+	
 
    <!-- Meta Pixel Code -->
 <script>
