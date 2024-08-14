@@ -1,6 +1,9 @@
 
 
 
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1488,6 +1491,7 @@ Shopify.routes.root = "/";</script>
       
 
 <!-- Novo Código Adicionado -->
+<!-- BOTÃO FLUTUANTE -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Seleciona o botão de adicionar ao carrinho dentro do sticky form
@@ -1496,12 +1500,21 @@ Shopify.routes.root = "/";</script>
     if (stickyButton) {
       stickyButton.addEventListener('click', function(event) {
         event.preventDefault(); // Previne o comportamento padrão do botão
+        
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        
+        // Constrói a URL de redirecionamento com os parâmetros UTM
+        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
         // Redireciona para a URL desejada
-        window.location.href = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+        window.location.href = finalUrl;
       });
     }
   });
 </script>
+
     
 
     <div class="product-meta__price-list-container" role="region" aria-live="polite">
