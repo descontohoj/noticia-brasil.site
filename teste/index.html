@@ -2018,7 +2018,17 @@ Shopify.routes.root = "/";</script>
 
           
  
-<div class="product-form__buy-buttons" ><form method="post" action="/cart/add" id="product-form-template--18235062714589__main-8753657610461" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" disabled name="id" value="45572417781981">
+<div id="scrollToTop" class="botaoflutuante">
+  <span class="button button--primary" id="clicar" data-action="add-to-cart">COMPRAR AGORA</span>
+  <script>
+    document.getElementById("clicar").addEventListener("click", function() {
+      var utms = document.location.search.replace('?', ''); // Captura UTMs da URL atual
+      var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ'; // URL do checkout
+      var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms; // Adiciona UTMs à URL
+      window.location.href = finalUrl; // Redireciona para o checkout
+    });
+  </script>
+</div>
 
 
               <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container" >
