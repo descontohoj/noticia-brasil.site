@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1483,6 +1484,16 @@ Shopify.routes.root = "/";</script>
 
       <!-- ESTRELAS APP DE REVIEW -->
       
+
+<!-- Novo Código Atualizado -->
+<script>
+  document.removeEventListener('DOMContentLoaded', function() {
+    const stickyButton = document.querySelector('.product-sticky-form__form #StickyAddToCart');
+    if (stickyButton) {
+      stickyButton.removeEventListener('click');
+    }
+  });
+</script>
 
 
     
