@@ -1942,21 +1942,34 @@ Shopify.routes.root = "/";</script>
             </div>
           </div>
 
-<product-payment-terms form-id="product-form-template--18235062714589__main-8753657610461"><form id="checkoutForm" method="GET" accept-charset="UTF-8" class="product-form">
-    <!-- Outros campos do formulário -->
-    <button type="submit">COMPRAR AGORA</button>
-</form>
+<product-payment-terms form-id="product-form-template--18235062714589__main-8753657610461"><!-- Substitua o formulário por um botão de redirecionamento direto -->
+<div class="product-form__buy-buttons">
+    <button id="directCheckoutButton" type="button">COMPRAR AGORA</button>
+</div>
 
 <script>
-  window.onload = function () {
-    var utms = document.location.search.replace('?', '');
-    var form = document.getElementById("checkoutForm");
-    if (form) {
-      var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
-      form.action = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+  document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona o botão de redirecionamento direto
+    const directButton = document.getElementById('directCheckoutButton');
+    
+    if (directButton) {
+      directButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do botão
+
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        
+        // Constrói a URL de redirecionamento com os parâmetros UTM
+        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
+        // Redireciona para a URL desejada
+        window.location.href = finalUrl;
+      });
     }
-  }
+  });
 </script>
+
 
 
    
