@@ -1327,9 +1327,20 @@ Shopify.routes.root = "/";</script>
               </div>
             </div>
           </div>
-        </div><div class="product-sticky-form__form"><product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" class="product-sticky-form__payment-container"><button id="StickyAddToCart" is="loader-button" form="product-form-template--18235062714589__main-8753657610461" type="submit" data-product-add-to-cart-button data-use-primary data-button-content="COMPRAR" class="product-form__add-button button button--primary" >COMPRAR</button>
-          </product-payment-container>
-        </div>
+<div class="product-sticky-form__form">
+  <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" class="product-sticky-form__payment-container">
+    <button id="StickyAddToCart" is="loader-button" type="button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary">
+      COMPRAR bu
+    </button>
+  </product-payment-container>
+</div>
+
+<script>
+  document.getElementById("StickyAddToCart").addEventListener("click", function() {
+    window.location.href = "https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz";
+  });
+</script>
+
       </div>
     </div>
   </product-sticky-form><div class="container"><nav aria-label="Trilha de navegação" class="breadcrumb text--xsmall text--subdued hidden-phone">
@@ -1966,11 +1977,28 @@ Shopify.routes.root = "/";</script>
 
           
  
-<div class="product-form__buy-buttons" ><form method="post" action="/cart/add" id="product-form-template--18235062714589__main-8753657610461" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" disabled name="id" value="45572417781981">
+<div class="product-form__buy-buttons">
+  <form method="post" action="/cart/add" id="product-form-template--18235062714589__main-8753657610461" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form">
+    <input type="hidden" name="form_type" value="product" />
+    <input type="hidden" name="utf8" value="✓" />
+    <input type="hidden" disabled name="id" value="45572417781981" />
 
+    <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container">
+      <button id="StickyAddToCart2" type="button" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full">
+        COMPRAR
+      </button>
+    </product-payment-container>
+    <input type="hidden" name="product-id" value="8753657610461" />
+    <input type="hidden" name="section-id" value="template--18235062714589__main" />
+  </form>
+</div>
+<store-pickup form-id="product-form-template--18235062714589__main-8753657610461" class="product-form__store-availability-container"></store-pickup>
 
-              <product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container" >
-                <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full" >COMPRAR fvs </button></product-payment-container><input type="hidden" name="product-id" value="8753657610461" /><input type="hidden" name="section-id" value="template--18235062714589__main" /></form></div><store-pickup form-id="product-form-template--18235062714589__main-8753657610461" class="product-form__store-availability-container"></store-pickup></div>
+<script>
+  document.getElementById("StickyAddToCart2").addEventListener("click", function() {
+    window.location.href = "https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz";
+  });
+</script>
 
 
      
