@@ -2462,7 +2462,89 @@ Shopify.routes.root = "/";</script>
  
 
 
+<!-- start vega cart script -->
+<div id="foxScriptCart">
+    <script defer>
+        function inArray(needle, haystack) {
+            var length = haystack.length;
+            for(var i = 0; i < length; i++) {
+                if(haystack[i] == needle) return true;
+            }
+            return false;
+        }
 
+        function setFormDataCloudfoxCheckout(method = "POST") {
+            
+            const urlCloudfoxCheckout = 'https://pay.buscabusca-online.com';
+            let form = document.querySelector(`form[action="${urlCloudfoxCheckout}"]`);
+
+            if(form === null) {
+                form = document.querySelector('form[action="/cart"]');
+                form.setAttribute('action', urlCloudfoxCheckout);
+            }
+
+            if(!form.hasAttribute('method')) form.setAttribute('method', method);
+            if(!form.hasAttribute('novalidate')) form.setAttribute('novalidate','novalidate');
+            if(!form.hasAttribute('data-fox')) form.setAttribute('data-fox', 'cart-form');
+
+            return form;
+        }
+
+        function createInputDataFox(name, loopIndex, value, dataFoxNumber, type = 'hidden') {
+            const element = document.createElement('input');
+            element.setAttribute('type', type);
+            element.setAttribute('data-fox', dataFoxNumber);
+            element.setAttribute('name',`${name}${loopIndex}`);
+            element.setAttribute('value',`${value}`);
+
+            return element;
+        }
+
+        function submitCheckout(formElement) {
+            const themeName = "sabino-v5-nichado-2";
+            const theme = themeName.toLowerCase();
+            const divFoxData = document.createElement('div');
+            divFoxData.setAttribute('id', 'foxData');
+
+            if(theme == 'warehouse') {
+                
+            } else {
+                
+            }
+
+            // console.log(formElement);
+
+            const form = setFormDataCloudfoxCheckout();
+            form.appendChild(divFoxData);
+
+            console.log(form);
+
+            form.submit();
+        }
+
+        console.log('product');
+
+        let form = document.querySelector('form[action="/cart"]');
+        if(form !== null) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                console.log(this);
+                submitCheckout(this);
+            });
+        }
+
+        // let buttonSubmit = document.querySelector('button[form="cart"][type="submit"]');
+        let buttonSubmit = document.querySelector('button[form]');
+        if(buttonSubmit !== null) {
+            buttonSubmit.addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log(form);
+                submitCheckout(form);
+            });
+        }
+    </script>
+</div>
+<!-- end vega cart script -->
 
 
 
