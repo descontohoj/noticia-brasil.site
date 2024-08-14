@@ -1991,41 +1991,53 @@ Shopify.routes.root = "/";</script>
     <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full">COMPRAR</button>
     
   </form>
-</div><input type="hidden" name="product-id" value="8753657610461" /><input type="hidden" name="section-id" value="template--18235062714589__main" /></form></div><store-pickup form-id="product-form-template--18235062714589__main-8753657610461" class="product-form__store-availability-container"></store-pickup></div>
+</div>
 
+<!-- Script para adicionar UTMs ao checkout -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('.shopify-product-form');
+    
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
 
-     
-
-  
- 
-
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
+        // Redireciona para a URL com UTMs
+        window.location.href = finalUrl;
+      });
+    }
+  });
+</script>
 
 <style>
-  
- 
   @media(max-width:768px) {
-  .cartoes{
-    max-height: auto;
-    width: var(--bandeiras-w-mobile);
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }  
+    .cartoes {
+      max-height: auto;
+      width: var(--bandeiras-w-mobile);
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }  
   }
 
   @media(min-width:769px) {
-   .cartoes{
-    max-height: auto;
-    width: var(--bandeiras-w-desktop);
-    margin-top: 0px;
-    margin-bottom: 5px;
-  }
+    .cartoes {
+      max-height: auto;
+      width: var(--bandeiras-w-desktop);
+      margin-top: 0px;
+      margin-bottom: 5px;
+    }
   } 
- .security__payment p {
-	color: #565656;
-	text-align: center;
-	margin: 10px auto 0;
-	font-size: var(--bandeiras-t-fonte);
-}
+  .security__payment p {
+    color: #565656;
+    text-align: center;
+    margin: 10px auto 0;
+    font-size: var(--bandeiras-t-fonte);
+  }
 </style>
 
   
