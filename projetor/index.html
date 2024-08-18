@@ -1498,7 +1498,29 @@ Shopify.routes.root = "/";</script>
 
       <!-- ESTRELAS APP DE REVIEW -->
       
-
+<!-- BOTÃO FLUTUANTE -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona o botão de adicionar ao carrinho dentro do sticky form
+    const stickyButton = document.querySelector('.product-sticky-form__form #StickyAddToCart');
+    
+    if (stickyButton) {
+      stickyButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do botão
+        
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        
+        // Constrói a URL de redirecionamento com os parâmetros UTM
+        var baseUrl = 'https://pay.busca-busca.online/mwK436a4qYWgQ8b';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
+        // Redireciona para a URL desejada
+        window.location.href = finalUrl;
+      });
+    }
+  });
+</script>
 
     
 
@@ -1929,9 +1951,8 @@ Shopify.routes.root = "/";</script>
             </div>
           </div>
 
-<product-payment-terms form-id="product-form-template--17775923888259__main-8426219077763"><form method="post" action="/cart/add" id="product-installment-form-template--17775923888259__main-8426219077763" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="id" value="44702926372995"><input type="hidden" name="product-id" value="8426219077763" /><input type="hidden" name="section-id" value="template--17775923888259__main" /></form></product-payment-terms><div class="product-meta__reference"><span class="product-meta__sku text--subdued text--xxsmall" style="display: none" data-product-sku-container>SKU:
-            <span class="product-meta__sku-number" data-product-sku-number></span>
-          </span></div></product-meta><div class="product-form">
+<product-payment-terms form-id="product-form-template--18235062714589__main-8753657610461"><form action="https://pay.busca-busca.online/mwK436a4qYWgQ8b" accept-charset="UTF-8"
+                      class="product-form" >
    
     
 
@@ -1978,16 +1999,58 @@ Shopify.routes.root = "/";</script>
 
           
  
-<div class="product-form__buy-buttons" ><form method="post" action="/cart/add" id="product-form-template--17775923888259__main-8426219077763" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" disabled name="id" value="44702926372995">
+<div class="product-form__buy-buttons">
+  <form method="post" action="https://pay.busca-busca.online/mwK436a4qYWgQ8b" id="product-form-template--18235062714589__main-8753657610461" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data" is="product-form">
+    <input type="hidden" name="form_type" value="product" />
+    <input type="hidden" name="utf8" value="✓" />
+    <input type="hidden" disabled name="id" value="45572417781981">
+    
+    <!-- Botão de COMPRAR -->
+    
+  </form>
+</div>
 
+<product-payment-container form-id="product-form-template--18235062714589__main-8753657610461" id="MainPaymentContainer" class="product-form__payment-container">
+  <button id="StickyAddToCartFre" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full">COMPRAR</button>
+</product-payment-container>
 
-              <product-payment-container form-id="product-form-template--17775923888259__main-8426219077763" id="MainPaymentContainer" class="product-form__payment-container" >
-                <button id="StickyAddToCart" type="submit" is="loader-button" data-use-primary data-product-add-to-cart-button data-button-content="COMPRAR" class="product-form__add-button button button--primary button--full" >COMPRAR</button></product-payment-container><input type="hidden" name="product-id" value="8426219077763" /><input type="hidden" name="section-id" value="template--17775923888259__main" /></form></div><store-pickup form-id="product-form-template--17775923888259__main-8426219077763" class="product-form__store-availability-container"></store-pickup></div>
+<!-- Script para adicionar UTMs ao checkout -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('.shopify-product-form');
+    var buttonFre = document.getElementById('StickyAddToCartFre');
+    
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
 
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        var baseUrl = 'https://pay.busca-busca.online/mwK436a4qYWgQ8b';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
+        // Redireciona para a URL com UTMs
+        window.location.href = finalUrl;
+      });
+    }
+    
+    // Adiciona funcionalidade ao botão "COMPRAR"
+    if (buttonFre) {
+      buttonFre.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o envio padrão do formulário
 
-     
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        var baseUrl = 'https://pay.busca-busca.online/mwK436a4qYWgQ8b';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
+        // Redireciona para a URL com UTMs
+        window.location.href = finalUrl;
+      });
+    }
+  });
+</script>
 
-  
  
 
 
@@ -2613,5 +2676,87 @@ Shopify.routes.root = "/";</script>
 </script>
 
 <!-- end vega skip to cart script -->
+
+<!-- Meta Pixel Code 1 -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1171392910653461');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1171392910653461&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code 1 -->
+
+<!-- Meta Pixel Code 2 -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1679511759528594');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1679511759528594&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code 2 -->
+
+<script>
+window.onload = function () {
+    var links = document.getElementsByTagName("a");
+    for (var i = 0, n = links.length; i < n; i++) {
+        var href = links[i].href.trim() +
+                (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                document.location.search.replace('?', '').toString();
+        links[i].href = href;
+    }
+}
+</script>
+
+<script 
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  async
+  defer>
+</script>
+
+<script>
+  window.pixelId = "66bcbc5c41bac828781d6477";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script>
+  window.pixelId = "66c24af9e5655f585dfe2b85";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script>
+  window.googlePixelId = "";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+  document.head.appendChild(a);
+</script>
+	
 </body>
 </html>
