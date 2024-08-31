@@ -1,0 +1,71 @@
+#maincontent {margin-top: 0px !important;}
+
+.navbar {max-width: 1300px !important;}
+
+.column.main {padding-bottom: 15px !important;}
+
+.catalog-product-view .columns {padding-top: 20px !important;}
+
+.product-info-main {margin-bottom: 0px !important;}
+
+.product-info-free-shipping-tag-container {padding-left: 0px !important;}
+
+.product-info-main .product-add-form .actions #product-addtocart-button {border-radius: 10px !important;}
+
+.payments-list .payment {font-weight: 600 !important;}
+
+.product-reviews-summary .rating-summary {margin-right: 5px !important;}
+
+#product-price-273395 {margin-top: -7.5px !important;}
+
+#offer-info-container {
+	width: fit-content;
+	display: flex;
+	padding: 10px 15px;
+	align-items: start;
+	border-radius: 15px;
+	margin-bottom: -5px;
+	flex-direction: column;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+#offer-info-container .offer-info {
+	display: flex;
+	margin-top: 5px;
+}
+
+#offer-info-container .offer-info:first-child {margin-top: 0px;}
+
+#offer-info-container .offer-info span, #offer-info-container .deadline {
+	color: #364864;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+#offer-info-container .offer-info span span {
+	color: #003c57;
+	font-weight: 600;
+}
+
+.product-quantity-left-container {margin-bottom: 15px !important;}
+
+.amreview-author-details .amreview-date {margin-bottom: 15px !important;}
+
+@media (max-width: 768px) {
+	.catalog-product-view .columns {padding-top: 15px !important;}
+
+	#ficha-tecnica {padding-top: 10px !important;}
+
+	.page-layout-1column .product.media {margin-bottom: 15px !important;}
+
+    .product-gallery-carousel {
+		padding-top: 20px !important;
+		padding-bottom: 20px !important;
+	}
+
+	.catalog-product-view .page-title-wrapper h1 {margin-bottom: 7px !important;}
+
+	.catalog-product-view .product.attribute.sku {margin-bottom: 10px !important;}
+}
