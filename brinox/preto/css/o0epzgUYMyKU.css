@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #003c57;
+}
+
+.navbar {
+	width: 100%;
+	max-width: 1000px !important;
+	user-select: none !important;
+	padding-top: 10px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	padding-bottom: 10px !important;
+}
+
+.navbar span {cursor: pointer !important;}
+
+.footer.content {padding-top: 15px !important;}
+
+.page-footer .policies ul {
+	gap: 10px !important;
+	padding-bottom: 15px !important;
+}
+
+.page-footer .policies li {
+	border-right: 1px solid #fff !important;
+	padding-right: 10px !important;
+}
+
+.page-footer .policies li:last-child {border-right: 0px !important;}
+
+.page-footer .footer-address .copyright {
+	padding: 15px 0px 0px 0px !important;
+	font-weight: 600 !important;
+}
+
+.page-footer .footer-address .footer-logo {
+	height: 100px !important;
+	margin-top: 20px !important;
+	object-fit: contain !important;
+	user-select: none !important;
+}
+
+.catalog-product-view .footer-address {margin-bottom: 5px !important;}
