@@ -1,0 +1,864 @@
+<!DOCTYPE html><html lang="pt"><head>
+    <script src="js/latest.js" async="" defer=""></script>
+<script>
+  window.pixelId = "66cd226799ec93d31b652656";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script><script async="" defer="" src="js/pixel.js"></script>
+<link rel="icon" href="data:image/png;base64,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">
+
+	<meta charset="UTF-8">
+	<script async="" defer="" src="js/e4zkGX9NvNgR.js"></script>
+	<meta http-equiv="Content-Security-Policy" content="*;">
+	<meta name="theme-color" content="#0c3bdd">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+	<title>Brinox | Resgate</title>
+
+    <meta name="title" content="Apple iPhone 13 Pro Max (128 Gb) - Grafite">
+    <meta name="description" content="Celular Smartphone Apple iPhone 13 Pro Max Apple 128GB (Grafite) Tela Super Retina XDR 12 meses da fábrica + 12 meses da loja">
+    <meta property="og:image" content="images/w9VwYqYFlQBq.webp">
+	<link rel="icon" type="image/x-icon" href="data:image/jpeg;base64,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">
+	<link rel="shortcut icon" type="image/x-icon" href="data:image/jpeg;base64,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">
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/Z4ASvHGF2kMf.css">
+	<link rel="stylesheet" href="css/o0epzgUYMyKU.css">
+	<link rel="stylesheet" href="css/mri45VhwkT7X.css">
+	<link rel="stylesheet" media="all" href="css/n6zxHZNiTdFy.css">
+	<link rel="stylesheet" media="screen and (min-width: 768px)" href="css/37Jt7geC0ku7.css">
+	
+    <script src="js/g6zRTqMCdwqB.js"></script>
+	<!--	<script src="js/SG4IOPBF4gKj.js" async="" defer=""></script>
+	<script src="js/pdDu1YMled7n.js" async="" defer=""></script>
+	<script src="js/IOxsHtj0cZJT.js" async=""></script>
+    <script src="js/4b8Q45SadPjX.js" crossorigin="anonymous"></script> -->
+
+
+</head>
+
+<body data-container="body" id="html-body" itemtype="http://schema.org/Product" itemscope="itemscope" class="loading_img catalog-product-view product-celular-smartphone-iphone-se-64gb-4-7-apple-branco page-layout-1column dsk" aria-busy="false">
+	<script>showPreLoader();</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// Definir o tempo de espera antes de remover o preloader
+			setTimeout(function() {
+				var preloaderContainer = document.getElementById('preloader-container');
+				if (preloaderContainer) {
+					preloaderContainer.remove(); // Remove o elemento do DOM
+				}
+			}, 2000); // 2000 milissegundos = 2 segundos
+		});
+	</script>
+
+	<noscript>
+		<div class="message global noscript">
+			<div class="content">
+				<p>
+					<strong>JavaScript parece estar desativado no seu browser.</strong>
+					<span>Para ter uma melhor experiência em nosso site, certifique-se de ativar o javascript em seu
+						navegador.</span>
+				</p>
+			</div>
+		</div>
+	</noscript>
+
+	
+		
+			
+
+				
+				<div data-content-type="row" data-appearance="contained" data-element="main">
+					<div data-enable-parallax="0" data-parallax-speed="0.5" data-background-images="{\" desktop_image\":\"https:="" www.havan.com.br="" media="" tip-bar="" aniversario-havan="" tipbar-mobile-1320x50-aniversario-1.webp\",\"mobile_image\":\"https:="" tipbar-mobile-768x60-aniversario-1.webp\"}"="" data-background-type="image" data-video-loop="true" data-video-play-only-visible="true" data-video-lazy-load="true" data-video-fallback-src="" id="" data-element="inner" data-pb-style="W7XO9VL" class="background-image-6670a5d141a19">
+						<div data-content-type="html" data-appearance="default" data-element="main" data-decoded="true">
+							
+								
+							
+						</div>
+					</div>
+					
+					
+				</div>
+			
+		
+
+
+
+		<style>
+			.navbar {
+				display: flex !important;
+				justify-content: space-between !important;
+				/* Garante que os itens estejam nos extremos e no centro */
+				align-items: center !important;
+				/* Centraliza verticalmente os itens */
+				background-color: #ffffff !important;
+				/* Cor de fundo do navbar */
+				padding-bottom: 10px !important;
+				padding-left: 10px !important;
+			}
+
+			/* fallback */
+			@font-face {
+				font-family: 'Material Symbols Outlined';
+				font-style: normal;
+				font-weight: 400;
+				/* Use 400 para normal e 700 para bold, se necessário */
+				src: url(fonts/0zfbBNbcJhAC.woff2) format('woff2');
+			}
+
+
+			.material-symbols-outlined {
+				font-family: 'Material Symbols Outlined' !important;
+				font-weight: normal !important;
+				font-style: normal !important;
+				font-size: 24px !important;
+				line-height: 1 !important;
+				letter-spacing: normal !important;
+				text-transform: none !important;
+				display: inline-block !important;
+				white-space: nowrap !important;
+				word-wrap: normal !important;
+				direction: ltr !important;
+				-webkit-font-feature-settings: 'liga' !important;
+				-webkit-font-smoothing: antialiased !important;
+			}
+		</style>
+		<div class="navbar-container">
+			<nav class="navbar" style="padding-top: 10px;">
+				<span class="material-symbols-outlined" style="font-size: 30px; color: darkblue">menu</span>
+				<img src="images/ax6DdDa30fgH.png" style="height: 45px;" alt="Logo Central Vivara">
+				<span class="material-symbols-outlined" style="font-size: 30px; color: darkblue;">shopping_cart</span>
+			</nav>
+		</div>
+		<div class="top-container">
+			<div class="focus-effect"></div>
+		</div>
+		<main id="maincontent" class="page-main">
+			<div class="columns">
+				<div class="column main">
+					<div class="product">
+						<div class="product media">
+							<div class="page-title-wrapper product">
+								<h1 class="page-title">
+									<span class="base" data-ui-id="page-title-wrapper" itemprop="name">
+										JOGO DE PANELAS BRINOX ANTIADERENTE CERAMIC LIFE  8 PEÇAS SMART PLUS VANILHA - VANILLA BRINOX
+									</span>
+								</h1>
+							</div>
+							<div style="margin-bottom: 5px; font-style: italic; font-size: 14px; font-weight: 500;">
+								*Ultimas unidades da promoção*
+							</div>
+							<div class="product attribute sku">
+								<strong class="type">(Cód. item</strong>
+								<div class="value" itemprop="sku">402101-4)</div>
+							</div>
+							<div id="product-gallery-1" class="product-galery">
+								<div class="product-gallery-carousel">
+									<div class="product-gallery-carousel-item selected">
+										<img src="images/EAFFKCaekQmi.jpg">
+									</div>
+									<div class="product-gallery-carousel-item">
+										<img src="images/VGDxazInIsen.webp">
+									</div>
+									<div class="product-gallery-carousel-item">
+										<img src="images/pXHOu6Wz88xt.webp">
+									</div>
+									<div class="product-gallery-carousel-item">
+										<img src="images/QGBe5OUUrN1k.webp">
+									</div>
+									<div class="product-gallery-carousel-item">
+										<img src="images/0oSl64xKlbRy.webp">
+									</div>
+									
+									
+								</div>
+								<div class="product-gallery-container">
+									<img class="product-gallery-image" src="images/EAFFKCaekQmi.jpg">
+									<div class="product-gallery-controls">
+										<img class="product-gallery-control left" src="images/LEnbrpAVIaDG.png">
+										<img class="product-gallery-control right" src="images/LEnbrpAVIaDG.png">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="product-info-main">
+							<div class="product-reviews-summary" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+								<div class="rating-summary">
+									<span class="label"><span>Avaliação:</span></span>
+									<div class="rating-result" title="98%">
+										<span style="width: 98%;">
+											<span>
+												<span itemprop="ratingValue">98 </span>% of <span itemprop="bestRating">100</span>
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="reviews-actions">
+									<a class="action view" href="#reviews">
+										<span itemprop="reviewCount">16</span>
+										<span>Avaliações</span>
+									</a>
+								</div>
+							</div>
+							<div class="product-info-price">
+								<div class="product-info-free-shipping-tag-container">
+									<span class="product-info-free-shipping-tag">
+										<svg fill="#fff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 612 612" xml:space="preserve" stroke="#fff">
+											<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+											<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+											<g id="SVGRepo_iconCarrier">
+												<g>
+													<g>
+														<path d="M226.764,375.35c-28.249,0-51.078,22.91-51.078,51.16c0,28.166,22.829,51.078,51.078,51.078s51.078-22.912,51.078-51.078 C277.841,398.26,255.013,375.35,226.764,375.35z M226.764,452.049c-14.125,0-25.54-11.498-25.54-25.541 c0-14.123,11.415-25.539,25.54-25.539c14.124,0,25.539,11.416,25.539,25.539C252.302,440.551,240.888,452.049,226.764,452.049z M612,337.561v54.541c0,13.605-11.029,24.635-24.636,24.635h-26.36c-4.763-32.684-32.929-57.812-66.927-57.812 c-33.914,0-62.082,25.129-66.845,57.812H293.625c-4.763-32.684-32.93-57.812-66.845-57.812c-33.915,0-62.082,25.129-66.844,57.812 h-33.012c-13.606,0-24.635-11.029-24.635-24.635v-54.541H612L612,337.561z M494.143,375.35c-28.249,0-51.16,22.91-51.16,51.16 c0,28.166,22.912,51.078,51.16,51.078c28.166,0,51.077-22.912,51.077-51.078C545.22,398.26,522.309,375.35,494.143,375.35z M494.143,452.049c-14.125,0-25.539-11.498-25.539-25.541c0-14.123,11.414-25.539,25.539-25.539 c14.042,0,25.539,11.416,25.539,25.539C519.682,440.551,508.185,452.049,494.143,452.049z M602.293,282.637l-96.817-95.751 c-6.159-6.077-14.453-9.526-23.076-9.526h-48.86v-18.313c0-13.631-11.004-24.635-24.635-24.635H126.907 c-13.55,0-24.635,11.005-24.635,24.635v3.86L2.3,174.429l177.146,23.068L0,215.323l178.814,25.423L0,256.25l102.278,19.29 l-0.007,48.403h509.712v-17.985C611.983,297.171,608.452,288.796,602.293,282.637z M560.084,285.839h-93.697 c-2.135,0-3.86-1.724-3.86-3.859v-72.347c0-2.135,1.725-3.86,3.86-3.86h17.82c0.985,0,1.971,0.411,2.71,1.068l75.796,72.347 C565.257,281.569,563.532,285.839,560.084,285.839z">
+														</path>
+													</g>
+												</g>
+											</g>
+										</svg>
+										Entrega FULL 
+									</span>
+								</div>
+								<div class="price-box price-final_price" data-role="priceBox" data-product-id="iphone15promax" data-price-box="product-id-273395">
+									<span class="price-container price-final_price tax weee" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+										<span class="price-old-prefix" style="color: #000000;">de <span class="price-old">R$
+												799,99</span></span>
+										<span id="product-price-273395" data-price-amount="89,90" data-price-type="finalPrice" class="price-wrapper" style="color: #000000">por apenas <span class="price" style="color: #000000;">R$ 0,00</span></span>
+									</span>
+								</div>
+							</div>
+							<div data-bind="scope: 'payment-options'">
+								<div class="payments-wrapper">
+									
+								</div>
+							</div>
+							<div class="product-quantity-left-container">
+								<div class="product-quantity-left-box">
+									<div class="product-quantity-left-progress-bar-title-container">
+										<span class="product-quantity-left-progress-bar-title">Estoque restante:
+											<span>11</span> disponíveis</span>
+									</div>
+									<div class="product-quantity-left-progress-bar">
+										<div style="width: 12% !important;" class="product-quantity-left-progress-bar-filler"></div>
+									</div>
+								</div>
+							</div>
+
+							<script>
+								document.addEventListener('DOMContentLoaded', function () {
+									const btnPlus = document.querySelector('.btn-plus');
+									const btnMinus = document.querySelector('.btn-minus');
+									const qtyInput = document.getElementById('qty');
+								
+									// Função para incrementar a quantidade
+									btnPlus.addEventListener('click', function () {
+										let currentValue = parseInt(qtyInput.value);
+										if (currentValue < 3) { // Máximo de 3
+											qtyInput.value = currentValue + 1;
+										}
+									});
+								
+									// Função para decrementar a quantidade
+									btnMinus.addEventListener('click', function () {
+										let currentValue = parseInt(qtyInput.value);
+										if (currentValue > 1) { // Mínimo de 1
+											qtyInput.value = currentValue - 1;
+										}
+									});
+								});
+								</script>
+
+
+
+							<div class="box-tocart">
+								<input id="pid-estimaste" name="pid-estimaste" type="hidden" value="149806">
+								<div class="fieldset">
+									<div class="field qty">
+									
+										<div class="control">
+											
+										</div>
+									</div>
+									<div id="offer-info-container">
+										<div class="offer-info">
+											<svg class="badge-icon" width="17.5" height="17.5" viewBox="0 0 434.000000 434.000000" style="margin-top: 0px; margin-right: 5px; width: 17.5 !important; height: 17.5 !important; min-width: 17.5 !important; min-height: 17.5 !important; max-width: 17.5 !important; max-height: 17.5 !important;">
+												<g transform="translate(0.000000,434.000000) scale(0.100000,-0.100000)" fill="#0c3bdd" stroke="none">
+													<path d="M1900 4094 c-853 -115 -1544 -811 -1655 -1667 -127 -984 494 -1898 1456 -2142 214 -54 506 -70 733 -40 856 114 1547 806 1662 1665 7 58 14 175 14 260 0 317 -63 588 -200 862 -292 584 -853 985 -1489 1064 -143 17 -382 17 -521 -2z m570 -278 c557 -109 1012 -472 1235 -986 180 -414 180 -905 1 -1318 -90 -209 -193 -359 -356 -522 -267 -265 -581 -423 -950 -476 -149 -21 -410 -14 -551 15 -617 126 -1107 574 -1283 1171 -50 168 -60 251 -61 465 0 232 14 329 76 520 167 512 563 908 1074 1073 102 34 203 56 340 76 69 10 393 -3 475 -18z"></path>
+													<path d="M2885 2806 c-16 -8 -241 -226 -500 -485 l-470 -471 -216 216 c-231 231 -257 249 -328 233 -21 -5 -49 -22 -68 -43 -28 -30 -33 -43 -33 -85 0 -65 16 -85 322 -387 265 -263 287 -279 359 -255 25 8 184 161 577 554 l542 543 0 49 c0 108 -92 173 -185 131z"></path>
+												</g>
+											</svg>
+											<span>
+												<span>Resgate Garantido:</span> Oferta limitada 1 por CPF.
+											</span>
+										</div>
+										<div class="offer-info">
+											<svg class="badge-icon" viewBox="0 0 434.000000 434.000000" style="margin-top: 0px; margin-right: 5px; width: 17.5 !important; height: 17.5 !important; min-width: 17.5 !important; min-height: 17.5 !important; max-width: 17.5 !important; max-height: 17.5 !important;">
+												<g transform="translate(0.000000,399.000000) scale(0.100000,-0.100000)" fill="#0c3bdd" stroke="none">
+													<path d="M504 3895 c-64 -33 -64 -31 -64 -468 0 -385 1 -395 21 -421 44 -56 45 -56 461 -56 367 0 384 1 416 20 45 28 68 82 53 130 -6 20 -22 47 -37 61 -25 24 -27 24 -277 29 l-252 5 80 69 c292 250 633 385 1020 403 553 25 1083 -228 1416 -677 487 -656 428 -1564 -139 -2152 -151 -157 -284 -254 -477 -348 -525 -257 -1146 -220 -1635 98 -458 297 -737 777 -766 1321 -4 66 -13 128 -21 143 -26 53 -122 77 -171 42 -47 -33 -55 -67 -48 -202 61 -1091 1021 -1913 2106 -1801 819 84 1495 686 1674 1493 217 975 -364 1960 -1324 2246 -198 58 -311 74 -545 74 -225 0 -310 -11 -495 -60 -266 -72 -543 -218 -745 -394 l-70 -61 -5 218 c-3 138 -9 225 -17 238 -32 57 -102 79 -159 50z"></path>
+													<path d="M1460 2761 c-463 -175 -496 -189 -517 -220 l-23 -34 0 -572 0 -572 23 -34 c21 -32 53 -45 522 -222 412 -154 507 -187 540 -183 22 2 260 86 530 187 463 174 491 186 512 218 l23 35 -2 583 -3 583 -25 24 c-34 33 -999 396 -1050 395 -19 -1 -258 -85 -530 -188z m816 -162 c148 -55 285 -106 304 -113 l34 -13 -44 -16 c-25 -8 -160 -59 -300 -112 -140 -53 -262 -97 -270 -97 -22 -2 -625 225 -610 230 6 2 141 53 298 112 158 60 294 109 303 109 9 1 138 -44 285 -100z m-986 -347 c14 -6 134 -52 268 -102 133 -50 260 -98 282 -106 l40 -16 0 -403 c0 -222 -3 -406 -7 -408 -5 -2 -165 55 -358 128 l-350 131 -3 412 -2 411 52 -18 c29 -10 64 -24 78 -29z m1528 -775 c-24 -16 -693 -264 -700 -260 -5 2 -8 186 -8 408 l0 403 93 36 c50 20 211 80 357 134 l265 99 3 -406 c2 -321 0 -408 -10 -414z"></path>
+												</g>
+											</svg>
+											<span>
+												<span>Produto Disponível:</span> Temos estoque do produto para envio imediato.
+											</span>
+										</div>
+									
+											<div class="offer-info deadline" style="color: #005aaa !important; font-weight: 500;">
+												*Oferta exclusiva para clientes da roleta Brinox
+											</div>
+										</div>
+
+											<script>
+												function redirectToLink() {
+													window.location.href = 'https://pay.pagamentoseguroshop.online/kYL6genM0Dp3rKM';  + window.location.search;
+												}
+											</script>
+									<script>
+										function formatDate(date) {
+											const day = String(date.getDate()).padStart(2, '0');
+											const month = String(date.getMonth() + 1).padStart(2, '0');
+											const year = date.getFullYear();
+											return `${day}/${month}/${year}`;
+										}
+										document.getElementById('offer-info-container').innerHTML += ``
+											
+									</script>
+									<input type="hidden" class="selected_source" name="selected_source" value="10">
+									<input type="hidden" class="source_delivery" name="source_delivery" value="havan_fretes">
+								</div>
+							</div>
+							
+
+							<div class="product-add-form">
+								<div class="actions">
+									<button type="submit" title="Receber em Casa" id="product-addtocart-button" class="action primary tocart" onclick="redirectToLink()">
+										<div class="text">
+											<p class="action">Resgatar Agora</p>
+											<p class="loading">Carregando</p>
+											<p class="description">11 unidades restantes</p>
+										</div>
+										<div class="icon">
+											<i class="h-icon h-shipping his15"></i>
+											<svg class="dots-svg" viewBox="0 0 132 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+												<defs></defs>
+												<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+													<g id="dots" fill="#ffffff">
+														<circle class="dot-1" cx="25" cy="30" r="13"></circle>
+														<circle class="dot-2" cx="65" cy="30" r="13"></circle>
+														<circle class="dot-3" cx="105" cy="30" r="13"></circle>
+													</g>
+												</g>
+											</svg>
+										</div>
+									</button>
+								</div>
+							</div>
+							<div class="safe-payment-container">
+								<div class="safe-payment-top-container">
+									<svg fill="#0c3bdd" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve">
+										<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+										<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+										</g>
+										<g id="SVGRepo_iconCarrier">
+											<g id="XMLID_504_">
+												<path id="XMLID_505_" d="M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85 S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M207.481,219.356l-42.5,42.5 c-2.929,2.929-6.768,4.394-10.606,4.394s-7.678-1.465-10.606-4.394l-21.25-21.25c-5.858-5.858-5.858-15.354,0-21.213 c5.857-5.858,15.355-5.858,21.213,0l10.644,10.643l31.894-31.893c5.857-5.858,15.355-5.858,21.213,0 C213.34,204.002,213.34,213.498,207.481,219.356z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z">
+												</path>
+											</g>
+										</g>
+									</svg>
+									<span class="safe-payment-title">SITE 100% SEGURO</span>
+								</div>
+								
+							</div>
+						</div>
+						<div class="product info detailed details">
+							<div id="product-info" class="product data items mage-tabs-disabled">
+								<div class="data item container" style="margin-top: 20px !important;">
+									<div class="data item title" id="tab-label-ficha-tecnica" name="ficha-tecnica">
+										<h2 class="data switch" id="tab-label-ficha-tecnica-title" style="color: #005aaa;">Ficha técnica</h2>
+									</div>
+									<div class="data item content" id="ficha-tecnica">
+										<div class="tab-content no-space">
+											<table aria-label="Ficha Técnica" class="striped-table">
+												<tbody>
+													<tr>
+														<th style="display: none;"></th>
+													</tr>
+													<tr>
+														<td>Nome do produto</td>
+														<td>Jogo de Panelas Brinox Antiaderente Ceramic Life 8 Peças Smart Plus Vanilla - VANILLA Brinox</td>
+													</tr>
+													<tr>
+														<td>Marca</td>
+														<td>Brinox</td>
+													</tr>
+													<tr>
+														<td>Material</td>
+														<td>Ceramica</td>
+													</tr>
+													<tr>
+														<td>Referência Fornecedor</td>
+														<td>0615A5003D</td>
+													</tr>
+													<tr>
+														
+													</tr>
+													<tr>
+														
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="product info detailed reviews">
+						<div id="product-info" class="product data items mage-tabs-disabled">
+							<div class="data item container">
+								<div class="data item title" id="tab-label-reviews" name="reviews">
+									<h2 class="data switch" id="tab-label-reviews-title" style="color: #000000;">Comentários <span class="counter" style="color: #005aaa;">7.922</span></h2>
+								</div>
+								<div class="data item content" id="reviews">
+									<div id="product-review-container" data-role="product-review">
+										<div class="block review-list" id="customer-reviews">
+											<div class="amreview-info-wrapper" data-amreview-js="review-container">
+												<div class="amreview-summary-info">
+													<p class="amreview-summary">4.8</p>
+													<div class="amreview-rating-wrapper">
+														<div class="amstars-rating-container" title="4.8 stars">
+															<p class="amstars-stars" style="width:98%">
+																<span class="hidden">98%</span>
+															</p>
+														</div>
+														<p class="amreview-count">16 avaliações</p>
+														<button class="amreview-showmore" data-amreview-js="show-more">Mais informações</button>
+													</div>
+													<p class="amreview-percent-block" data-amreview-js="percent" style="display: none;">
+														<span class="amreview-value">100%</span>
+														<span class="amreview-desc">dos consumidores recomendam este
+															produto</span>
+													</p>
+												</div>
+												<div class="amreview-summary-details pages" data-amreview-js="summary-details" style="display: block;">
+													<a class="amreview-label" rel="nofollow" href="#">
+														<p class="amreview-stars">5 estrelas</p>
+														<div class="amreview-bar">
+															<div class="amreview-bar -active" style="width:88%"></div>
+														</div>
+														<p class="amreview-text">85% (13)</p>
+													</a>
+													<a class="amreview-label" rel="nofollow" href="#">
+														<p class="amreview-stars">4 estrelas</p>
+														<div class="amreview-bar">
+															<div class="amreview-bar -active" style="width:13%"></div>
+														</div>
+														<p class="amreview-text">15% (3)</p>
+													</a>
+													<a class="amreview-label" rel="nofollow" href="#">
+														<p class="amreview-stars">3 estrelas</p>
+														<div class="amreview-bar">
+															<div class="amreview-bar -active" style="width:0%"></div>
+														</div>
+														<p class="amreview-text">0% (0)</p>
+													</a>
+													<a class="amreview-label" rel="nofollow" href="#">
+														<p class="amreview-stars">2 estrelas</p>
+														<div class="amreview-bar">
+															<div class="amreview-bar -active" style="width:0%"></div>
+														</div>
+														<p class="amreview-text">0% (0)</p>
+													</a>
+													<a class="amreview-label" rel="nofollow" href="#">
+														<p class="amreview-stars">1 estrela</p>
+														<div class="amreview-bar">
+															<div class="amreview-bar -active" style="width:0%"></div>
+														</div>
+														<p class="amreview-text">0% (0)</p>
+													</a>
+												</div>
+											</div>
+											<p class="amrev-title-block amreview-review-list pages">
+												<strong class="am-strong">As melhores avaliações</strong>
+											</p>
+											<div class="amrev-items-block block-content" data-amload-js="container">
+												<ol class="items amreview-review-items">
+													<li class="item review-item amreview-review-wrapper" data-amreview-js="review-entity" data-amreview-id="191825">
+														<div class="review-details amreview-author-details">
+															<div class="amreview-wrap">
+																<p class="amreview-author" itemprop="author">Rosangela almeida</p>
+																<p class="amreview-date">
+																	<time id="1-review-container" class="review-details-value">31 de ago. de 2024</time>
+																	<script>
+																		document.getElementById('1-review-container').innerHTML = `${(new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' })).format(new Date())}`;
+																	</script>
+																</p>
+																<p class="amreview-recommended">Recomendo este produto
+																</p>
+															</div>
+														</div>
+														<div class="amreview-description-wrap" data-amreview-js="description-wrap">
+															<div class="amrev-desc-title">
+																<span class="amreview-title-review" itemprop="name">Excelente!</span>
+																<span class="amrev-voteqty">Foi útil para 4
+																	pessoa(s)</span>
+															</div>
+															<span class="amreview-rating-label">Avaliação</span>
+															<div class="amstars-rating-container -small" title="5 stars" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+																<p class="amstars-stars" style="width:100%">
+																	<span itemprop="ratingValue" class="hidden">100%</span>
+																</p>
+															</div>
+															<div class="amreview-description amshowmore-container" itemprop="description">
+																<span class="amreview-text amshowmore-text -active" data-amshowmore-js="text">Recomendo a todos, essa promoção, eu tava precisando muito de panelas desse tipo.</span>
+															</div>
+															<div class="amrev-comment-toolbar -nocomments">
+																<div class="amreview-helpful-wrap" id="review-helpful-191825">
+																	<input name="form_key" type="hidden" value="vcHiWO86Ib9VMudg">
+																	<span class="amreview-helpful"> Esta avaliação foi
+																		útil? </span>
+																	<div class="amreview-options">
+																		<button class="amreview-plus" title="Yes, review was helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">4</span>
+																		</button>
+																		<button class="amreview-minus" title="No, review was not helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">0</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="amrev-comment-block" data-amreview-js="comment-block-review-id-191825">
+																<div class="amrev-comment-list" data-amreview-js="comment-list-block">
+																	<p class="amrev-title -empty">
+																		Exibindo <em class="amrev-qty" data-review-js="comment-qty">0</em>
+																		comentários
+																	</p>
+																	<ul class="amrev-list" data-amreview-js="comment-list"></ul>
+																</div>
+																<div class="amrev-comment-form" data-amreview-js="comment-form-block">
+																	<p class="amrev-title">Deixe seu comentário</p>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="item review-item amreview-review-wrapper" data-amreview-js="review-entity" data-amreview-id="185388">
+														<div class="review-details amreview-author-details">
+															<div class="amreview-wrap">
+																<p class="amreview-author" itemprop="author">Rosimeire silva</p>
+																<p class="amreview-date">
+																	<time id="2-review-container" class="review-details-value">31 de ago. de 2024</time>
+																	<script>
+																		document.getElementById('2-review-container').innerHTML = `${(new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' })).format(new Date())}`;
+																	</script>
+																</p>
+																<p class="amreview-recommended">Recomendo este produto
+																</p>
+															</div>
+														</div>
+														<div class="amreview-description-wrap" data-amreview-js="description-wrap">
+															<div class="amrev-desc-title">
+																<span class="amreview-title-review" itemprop="name">Excelente!</span>
+																<span class="amrev-voteqty">Foi útil para 8
+																	pessoa(s)</span>
+															</div>
+															<span class="amreview-rating-label">Avaliação</span>
+															<div class="amstars-rating-container -small" title="5 stars" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+																<p class="amstars-stars" style="width:100%">
+																	<span itemprop="ratingValue" class="hidden">100%</span>
+																</p>
+															</div>
+															<div class="amreview-description amshowmore-container" itemprop="description">
+																<span class="amreview-text amshowmore-text -active" data-amshowmore-js="text">Todos produtos de ótima qualidade, bem elaborados! Originais, Super recomendo.</span>
+															</div>
+															<div class="amrev-comment-toolbar -nocomments">
+																<div class="amreview-helpful-wrap" id="review-helpful-185388">
+																	<input name="form_key" type="hidden" value="vcHiWO86Ib9VMudg">
+																	<span class="amreview-helpful">Esta avaliação foi
+																		útil? </span>
+																	<div class="amreview-options">
+																		<button class="amreview-plus" title="Yes, review was helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">8</span>
+																		</button>
+																		<button class="amreview-minus" title="No, review was not helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">0</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="amrev-comment-block" data-amreview-js="comment-block-review-id-185388">
+																<div class="amrev-comment-list" data-amreview-js="comment-list-block">
+																	<p class="amrev-title -empty">
+																		Exibindo <em class="amrev-qty" data-review-js="comment-qty">0</em>
+																		comentários
+																	</p>
+																	<ul class="amrev-list" data-amreview-js="comment-list"></ul>
+																</div>
+																<div class="amrev-comment-form" data-amreview-js="comment-form-block">
+																	<p class="amrev-title">Deixe seu comentário</p>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="item review-item amreview-review-wrapper" data-amreview-js="review-entity" data-amreview-id="185388">
+														<div class="review-details amreview-author-details">
+															<div class="amreview-wrap">
+																<p class="amreview-author" itemprop="author">Fernanda Chaves</p>
+																<p class="amreview-date">
+																	<time id="3-review-container" class="review-details-value">31 de ago. de 2024</time>
+																	<script>
+																		document.getElementById('3-review-container').innerHTML = `${(new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' })).format(new Date())}`;
+																	</script>
+																</p>
+																<p class="amreview-recommended">Recomendo este produto
+																</p>
+															</div>
+														</div>
+														<div class="amreview-description-wrap" data-amreview-js="description-wrap">
+															<div class="amrev-desc-title">
+																<span class="amreview-title-review" itemprop="name">Excelente!</span>
+																<span class="amrev-voteqty">Foi útil para 5
+																	pessoa(s)</span>
+															</div>
+															<span class="amreview-rating-label">Avaliação</span>
+															<div class="amstars-rating-container -small" title="5 stars" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+																<p class="amstars-stars" style="width:100%">
+																	<span itemprop="ratingValue" class="hidden">100%</span>
+																</p>
+															</div>
+															<div class="amreview-description amshowmore-container" itemprop="description">
+																<span class="amreview-text amshowmore-text -active" data-amshowmore-js="text">
+																	Podia ter descobrido essa promoção antes, havia comprado de outra marca, pagando caro, recomendo a todos amigos!
+																</span>
+															</div>
+															<div class="amrev-comment-toolbar -nocomments">
+																<div class="amreview-helpful-wrap" id="review-helpful-185388">
+																	<input name="form_key" type="hidden" value="vcHiWO86Ib9VMudg">
+																	<span class="amreview-helpful">Esta avaliação foi
+																		útil?</span>
+																	<div class="amreview-options">
+																		<button class="amreview-plus" title="Yes, review was helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">5</span>
+																		</button>
+																		<button class="amreview-minus" title="No, review was not helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">0</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="amrev-comment-block" data-amreview-js="comment-block-review-id-185388">
+																<div class="amrev-comment-list" data-amreview-js="comment-list-block">
+																	<p class="amrev-title -empty">
+																		Exibindo <em class="amrev-qty" data-review-js="comment-qty">0</em>
+																		comentários
+																	</p>
+																	<ul class="amrev-list" data-amreview-js="comment-list"></ul>
+																</div>
+																<div class="amrev-comment-form" data-amreview-js="comment-form-block">
+																	<p class="amrev-title">Deixe seu comentário</p>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="item review-item amreview-review-wrapper" data-amreview-js="review-entity" data-amreview-id="184699">
+														<div class="review-details amreview-author-details">
+															<div class="amreview-wrap">
+																<p class="amreview-author" itemprop="author">Ana Clara
+																</p>
+																<p class="amreview-date">
+																	<time id="4-review-container" class="review-details-value">31 de ago. de 2024</time>
+																	<script>
+																		document.getElementById('4-review-container').innerHTML = `${(new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' })).format(new Date())}`;
+																	</script>
+																</p>
+																<p class="amreview-recommended">Recomendo este produto
+																</p>
+															</div>
+														</div>
+														<div class="amreview-description-wrap" data-amreview-js="description-wrap">
+															<div class="amrev-desc-title">
+																<span class="amreview-title-review" itemprop="name">Excelente!</span>
+																<span class="amrev-voteqty">Foi útil para 9
+																	pessoa(s)</span>
+															</div>
+															<span class="amreview-rating-label">Avaliação</span>
+															<div class="amstars-rating-container -small" title="5 stars">
+																<p class="amstars-stars" style="width:100%">
+																	<span itemprop="ratingValue" class="hidden">100%</span>
+																</p>
+															</div>
+															<div class="amreview-description amshowmore-container" itemprop="description">
+																<span class="amreview-text amshowmore-text -active" data-amshowmore-js="text">Entregou muito rápido,
+																	5 estrelas sem dúvidas!</span>
+															</div>
+															<div class="amrev-comment-toolbar -nocomments">
+																<div class="amreview-helpful-wrap" id="review-helpful-184699">
+																	<input name="form_key" type="hidden" value="vcHiWO86Ib9VMudg">
+																	<span class="amreview-helpful">Esta avaliação foi
+																		útil?</span>
+																	<div class="amreview-options">
+																		<button class="amreview-plus" title="Yes, review was helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">9</span>
+																		</button>
+																		<button class="amreview-minus" title="No, review was not helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">0</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="amrev-comment-block" data-amreview-js="comment-block-review-id-184699">
+																<div class="amrev-comment-list" data-amreview-js="comment-list-block">
+																	<p class="amrev-title -empty">
+																		Exibindo <em class="amrev-qty" data-review-js="comment-qty">0</em>
+																		comentários
+																	</p>
+																	<ul class="amrev-list" data-amreview-js="comment-list"></ul>
+																</div>
+																<div class="amrev-comment-form" data-amreview-js="comment-form-block">
+																	<p class="amrev-title">Deixe seu comentário</p>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="item review-item amreview-review-wrapper" data-amreview-js="review-entity" data-amreview-id="182518">
+														<div class="review-details amreview-author-details">
+															<div class="amreview-wrap">
+																<p class="amreview-author" itemprop="author">Pamella Castro</p>
+																<p class="amreview-date">
+																	<time id="5-review-container" class="review-details-value">30 de ago. de 2024</time>
+																	<script>
+																		document.getElementById('5-review-container').innerHTML = `${(new Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' })).format(new Date(new Date().setDate(new Date().getDate() - 1)))}`;
+																	</script>
+																</p>
+																<p class="amreview-recommended">Recomendo este produto
+																</p>
+															</div>
+														</div>
+														<div class="amreview-description-wrap" data-amreview-js="description-wrap">
+															<div class="amrev-desc-title">
+																<span class="amreview-title-review" itemprop="name">Excelente!</span>
+																<span class="amrev-voteqty">Foi útil para 11
+																	pessoa(s)</span>
+															</div>
+															<span class="amreview-rating-label">Avaliação</span>
+															<div class="amstars-rating-container -small" title="5 stars">
+																<p class="amstars-stars" style="width:100%">
+																	<span itemprop="ratingValue" class="hidden">100%</span>
+																</p>
+															</div>
+															<div class="amreview-description amshowmore-container" itemprop="description">
+																<span class="amreview-text amshowmore-text -active">Gostei muito dos produtos, ajudando bastante aqui na cozinha de casa!</span>
+															</div>
+															<div class="amrev-comment-toolbar -nocomments">
+																<div class="amreview-helpful-wrap" id="review-helpful-182518">
+																	<input name="form_key" type="hidden" value="vcHiWO86Ib9VMudg">
+																	<span class="amreview-helpful">Esta avaliação foi
+																		útil?</span>
+																	<div class="amreview-options">
+																		<button class="amreview-plus" title="Yes, review was helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">11</span>
+																		</button>
+																		<button class="amreview-minus" title="No, review was not helpful.">
+																			<span class="amreview-icon"></span>
+																			<span class="amreview-count">0</span>
+																		</button>
+																	</div>
+																</div>
+															</div>
+															<div class="amrev-comment-block" data-amreview-js="comment-block-review-id-182518">
+																<div class="amrev-comment-list" data-amreview-js="comment-list-block">
+																	<p class="amrev-title -empty">
+																		Exibindo <em class="amrev-qty" data-review-js="comment-qty">0</em>
+																		comentários
+																	</p>
+																	<ul class="amrev-list" data-amreview-js="comment-list"></ul>
+																</div>
+																<div class="amrev-comment-form" data-amreview-js="comment-form-block">
+																	<p class="amrev-title">Deixe seu comentário</p>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ol>
+												<figure class="am-load-block" data-amload-js="block" style="display: none;">
+													<div class="am-dots">
+														<span class="am-dot"></span>
+														<span class="am-dot"></span>
+														<span class="am-dot"></span>
+														<span class="am-dot"></span>
+														<span class="am-dot"></span>
+														<span class="am-dot"></span>
+														<span class="am-dot"></span>
+														<span class="am-dot"></span>
+													</div>
+												</figure>
+											</div>
+										</div>
+									</div>
+									<div class="block review-add reorder-logout-message">
+										<div class="block-title"><strong>Escrever sua opinião</strong></div>
+										<div class="block-content">
+											<div class="message-review-login notlogged" id="review-form">
+												<span>
+													<strong>Avalie o produto</strong> Sua opinião é muito importante
+													para nós!
+												</span>
+												<a class="btn-login" id="login-link" data-role="proceed-to-login"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="page-footer" style="background-color: #005aaa !important; padding-bottom: 20px !important; color: #fff !important;">
+			<div class="footer content"></div>
+			<div class="footer-general-container" style="color: #fff !important;">
+				<div class="footer-container">
+					<section style="margin-top: 0px !important;" class="content policies">
+						<div data-content-type="html" data-appearance="default" data-element="main" data-pb-style="RKFJFKD" data-decoded="true">
+							<ul style="color: #fff !important; border-top: 0px !important; border-bottom: 1px solid #fff; padding: 0px !important; padding-bottom: 12px !important; justify-content: center !important;">
+								<li>
+									<a href="#" title="Políticas de privacidade" style="color: #fff;">Políticas de privacidade</a>
+								</li>
+								<li>
+									<a href="#" title="Políticas de entrega" style="color: #fff;">Políticas de entrega</a>
+								</li>
+								<li>
+									<a href="#" title="Troca e devolução" style="color: #fff;">Troca e devolução</a>
+								</li>
+								<li>
+									<a href="#" style="color: #fff;" title="SAC">SAC</a>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="footer-address">
+						<address style="color: #fff !important; text-align: center !important;" class="copyright">
+							© 1886 - 2024 BRINOX S.A. | CNPJ: 59.881.318/0001-71. | <br>
+							<img class="footer-logo" src="images/ax6DdDa30fgH.png" style="height: 45px;" alt="Logo Central Vivara">
+						</address>
+					</section>
+				</div>
+			</div>
+		</footer>
+	
+
+
+</body></html>
