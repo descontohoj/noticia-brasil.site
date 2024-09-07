@@ -1751,7 +1751,35 @@ font-size: 13px;
 
 
   <h5 class="vendidos02" style="font-size:13px;color: #777e9a; margin-bottom: 18px; ">Destaque |  <span id="quantidade-vendidos"></span> vendidos</h5>
+
+      <!-- ESTRELAS APP DE REVIEW -->
+      
+
+<!-- Novo Código Adicionado -->
+<!-- BOTÃO FLUTUANTE -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona o botão de adicionar ao carrinho dentro do sticky form
+    const stickyButton = document.querySelector('.product-sticky-form__form #StickyAddToCart');
+    
+    if (stickyButton) {
+      stickyButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do botão
         
+        // Captura os parâmetros UTM da URL atual
+        var utms = document.location.search.replace('?', '');
+        
+        // Constrói a URL de redirecionamento com os parâmetros UTM
+        var baseUrl = 'https://pay.busca-busca.online/nQ7kZ7vQReL30eJ';
+        var finalUrl = baseUrl + (baseUrl.indexOf("?") > 0 ? '&' : '?') + utms;
+        
+        // Redireciona para a URL desejada
+        window.location.href = finalUrl;
+      });
+    }
+  });
+</script>
+	  
 <script>
 let getRandomNumberSold = function(min, max) {
 let getRandomSold = Math.floor(Math.random() * (max - min + 1)) + min
