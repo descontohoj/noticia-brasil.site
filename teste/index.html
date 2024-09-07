@@ -1738,7 +1738,8 @@ for (var attr in meta) {
     </div>
   </div>
             </div><div class="product-block-list__item product-block-list__item--info"><div class="card card--collapsed card--sticky"><div id="product-zoom-template--15593668739190__main" class="product__zoom-wrapper"></div><section id ="back-atcbtn"></section> 
-  <div class="card__section"><form method="post" action="/cart/add" id="product_form_template--15593668739190__main7389539827830" accept-charset="UTF-8" class="product-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><style> 
+  <div class="card__section"><form action="https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz" accept-charset="UTF-8"
+                      class="product-form" > enctype="multipart/form-data"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><style> 
 .vendidos02 {
 margin-bottom: -15px; 
 font-size: 13px;  
@@ -4125,14 +4126,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
       });
     });   
   }); 
-</script><div id="scrollToTop" class="botaoflutuante_novo">        
-    <span class="button button--primary" id="clicar"  style= "width: 100%; font-size:px; font-weight: 500;" data-action="add-to-cart"> <i class="fa-solid fa-bag-shopping"></i> COMPRAR AGORA</span>          
+</script><div id="scrollToTop" class="botaoflutuante">
+          <span class="button button--primary" id="clicar" data-action="add-to-cart">COMPRAR AGORA</span>
           <script>
-            $("#clicar").on("click", function() {
-              $(".product-form__add-button").trigger("click");
+            document.getElementById("clicar").addEventListener("click", function() {
+              window.location.href = "https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz";
             });
           </script>
-    	</div><script>
   var buttons = document.querySelectorAll('.button-checkout-yampi');
   buttons.forEach(function(button) {
     button.addEventListener('click', function(event) {
