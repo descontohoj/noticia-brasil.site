@@ -4114,15 +4114,40 @@ document.addEventListener( 'DOMContentLoaded', function () {
 </div>
                           </div></div></div>
                   </div></div>
-      </div>
-    </div></section><div id="scrollToTop" class="botaoflutuante">
-  <span class="button button--primary" id="clicar" data-action="add-to-cart">COMPRAR AGORA</span>
+</div></section><!-- SCRIPT BOTÃO YAMPI -->
+<script>
+  var buttons = document.querySelectorAll('[onclick="timedRedirect()"]');
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+      document.addEventListener('product:added', function(event) {
+        showYampiLoader();
+        window.location.href = 'https://pay.cupomdescontos.com/65XDZBxdBbpgVJw'; // Substitua pelo link do seu checkout
+      });
+    });
+  });
+</script>
+<div id="scrollToTop" class="botaoflutuante_novo">        
+  <span class="button button--primary" id="clicar" style="width: 100%; font-size:px; font-weight: 500;" data-action="add-to-cart"> 
+    <i class="fa-solid fa-bag-shopping"></i> COMPRAR AGORA
+  </span>          
   <script>
-    document.getElementById("clicar").addEventListener("click", function() {
-      // Redireciona para o link especificado
-      window.location.href = "https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz";
+    $("#clicar").on("click", function() {
+      $(".product-form__add-button").trigger("click");
     });
   </script>
+</div>
+<script>
+  var buttons = document.querySelectorAll('.button-checkout-yampi');
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+      document.addEventListener('product:added', function(event) {
+        showYampiLoader();
+        window.location.href = 'https://pay.cupomdescontos.com/65XDZBxdBbpgVJw'; // Substitua pelo link do seu checkout
+      });
+    });
+  });
+</script>
+
 </div>
  
 
