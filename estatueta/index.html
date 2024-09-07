@@ -1,40 +1,7 @@
 <!DOCTYPE html><html lang="pt-BR"><head>
-    <script async="" src="js/fbevents.js"></script><script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Get current page's query parameters
-            const queryParams = window.location.search;
 
-            // Get all <a> tags on the page
-            const links = document.querySelectorAll('a');
-
-            // Loop through each link
-            links.forEach(function (link) {
-                // Check if the link already has query parameters
-                if (link.href.includes('?')) {
-                    // If yes, append the current page's parameters with an '&' prefix
-                    link.href += '&' + queryParams.substring(1);
-                } else {
-                    // If no, and if queryParams is not empty, append the current page's parameters
-                    if (queryParams) {
-                        link.href += queryParams;
-                    }
-                }
-                console.log(link.href)
-            });
-        });
-
-    </script>
-     <script>
-  window.pixelId = "66ab1a374ce0e73382547ae8";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script><script async="" defer="" src="js/pixel.js"></script>
-    <script src="js/latest.js" async="" defer=""></script>
     <script>
-	  const link = '/resgate/fatima/autentica';
+	  const link = '/fatima/';
 	
 	  function setBackRedirect(url) {
 		let urlBackRedirect = url.trim() +
@@ -55,7 +22,7 @@
 	  setBackRedirect(link);
 	</script>
 	<script>
-	  const link = '/resgate/fatima/autentica/';
+	  const link = '/fatima/';
 	
 	  function setBackRedirect(url) {
 		let urlBackRedirect = url.trim() +
@@ -1011,6 +978,49 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 
     </script>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1171392910653461');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1171392910653461&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
+<script>
+window.onload = function () {
+    var links = document.getElementsByTagName("a");
+    for (var i = 0, n = links.length; i < n; i++) {
+        var href = links[i].href.trim() +
+                (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                document.location.search.replace('?', '').toString();
+        links[i].href = href;
+    }
+}
+</script>
+
+<script 
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  async
+  defer>
+</script>
+
+<script>
+  window.pixelId = "66bcbc5c41bac828781d6477";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
 
 <script>console.log('01-quiz');</script></strong></strong></body></html><!-- Page cached by LiteSpeed Cache 6.2.0.1 on 2024-07-31 17:54:16 -->
