@@ -4115,34 +4115,16 @@ document.addEventListener( 'DOMContentLoaded', function () {
                           </div></div></div>
                   </div></div>
       </div>
-    </div></section><!-- SCRIPT BOTÃO YAMPI -->
-<script>
-  var buttons = document.querySelectorAll('[onclick="timedRedirect()"]');
-  buttons.forEach(function(button) {
-    button.addEventListener('click', function(event) {
-      document.addEventListener('product:added', function(event) {
-        showYampiLoader();
-        getNewCheckoutURL();
-      });
-    });   
-  }); 
-</script><div id="scrollToTop" class="botaoflutuante">
-          <span class="button button--primary" id="clicar" data-action="add-to-cart">COMPRAR AGORA</span>
-          <script>
-            document.getElementById("clicar").addEventListener("click", function() {
-              window.location.href = "https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz";
-            });
-          </script>
-  var buttons = document.querySelectorAll('.button-checkout-yampi');
-  buttons.forEach(function(button) {
-    button.addEventListener('click', function(event) {
-      document.addEventListener('product:added', function(event) {
-        showYampiLoader();
-        getNewCheckoutURL();
-      });
-    });   
-  }); 
-</script>  
+    </div></section><div id="scrollToTop" class="botaoflutuante">
+  <span class="button button--primary" id="clicar" data-action="add-to-cart">COMPRAR AGORA</span>
+  <script>
+    document.getElementById("clicar").addEventListener("click", function() {
+      // Redireciona para o link especificado
+      window.location.href = "https://pay.redirecionamento.shop/6YQPgjlWEo9Zpxz";
+    });
+  </script>
+</div>
+ 
 
     </div><div id="shopify-section-template--15593668739190__16720746583fe69feb" class="shopify-section"><div class="container"></div>
 
