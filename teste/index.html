@@ -560,7 +560,7 @@ Shopify.routes.root = "/";</script>
         productSalePrice: "Preço promocional",
         collectionOnSaleLabel: "",
         productFormUnavailable: "Indisponível",
-        productFormAddToCart: "COMPRAR",
+        productFormAddToCart: "COMPRAR AGORA",
         productFormSoldOut: "Esgotado",
         productAdded: "Produtos foram adicionados ao seu carrinho",
         productAddedShort: "Adicionado !",
@@ -2369,7 +2369,7 @@ input[type="file"]::file-selector-button {
           </div>
         </div>
       </div> 
-        <button style= "margin-bottom: 10px; height:45px; width: 100%;  font-weight: 500;" type="submit" class="product-form__add-button button button--primary" id="pulsante" data-action="add-to-cart">COMPRAR</button></div><button class="button button--primary2" style= "margin-bottom: 10px; margin-top: 0px; height:45px; font-size:var(--base-text-font-size); width: 100%;  font-weight: 700;" type="submit" class="product-form__add-button button button--primary" data-action="add-to-cart">Adicionar ao carrinho</button></div>         
+        <button style= "margin-bottom: 10px; height:45px; width: 100%;  font-weight: 500;" type="submit" class="product-form__add-button button button--primary" id="pulsante" data-action="add-to-cart">COMPRAR AGORA</button></div><button class="button button--primary2" style= "margin-bottom: 10px; margin-top: 0px; height:45px; font-size:var(--base-text-font-size); width: 100%;  font-weight: 700;" type="submit" class="product-form__add-button button button--primary" data-action="add-to-cart">Adicionar ao carrinho</button></div>         
       <style>
      .shopify-payment-button__button {
       font-size:19px;
@@ -4470,7 +4470,7 @@ display: contents;"><form method="post" action="/localization" id="localization_
 <script>
     if(document.querySelector('button[name="add"]')) {
         let buyNowButton = document.querySelector('button[name="add"]');
-        buyNowButton.querySelector("span").innerText = 'Comprar Agora'
+        buyNowButton.querySelector("span").innerText = 'COMPRAR AGORA'
     }
 
     if(document.cookie.match(new RegExp('cart=([^;]+)')) && form !== null) {
