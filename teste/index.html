@@ -1,15 +1,416 @@
 
-<!DOCTYPE html><html lang="pt-BR"><head><meta charSet="utf-8"/><title>Quiz - Cacau Show</title><meta name="Teste" content="Teste"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="icon" href="/logo.svg"/><script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async="" defer=""></script><meta name="next-head-count" content="6"/><script src="https://cdn.jsdelivr.net/npm/disable-devtool"></script><script>
-              (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-                var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-                j.async=true;
-                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-WD62MGGN');
-            </script><script>(function(c,l,a,r,i,t,y){
-           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "ntgivinxn2")</script><link rel="preload" href="/_next/static/media/9bf67a161a796382-s.p.woff2" as="font" type="font/woff2" crossorigin="anonymous" data-next-font="size-adjust"/><link rel="preload" href="/_next/static/css/2c8d1ed793ef2887.css" as="style" crossorigin=""/><link rel="stylesheet" href="/_next/static/css/2c8d1ed793ef2887.css" crossorigin="" data-n-g=""/><link rel="preload" href="/_next/static/css/61a6504561c56787.css" as="style" crossorigin=""/><link rel="stylesheet" href="/_next/static/css/61a6504561c56787.css" crossorigin="" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" crossorigin="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-776cf3f577bcfbe8.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/framework-5429a50ba5373c56.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/main-733d4166479b8229.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/pages/_app-0ca7daf1f99c31f8.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/959-5661668d1c407ac0.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/285-8474d88ab9b8b44f.js" defer="" crossorigin=""></script><script src="/_next/static/chunks/pages/caixas-brancas-0e54640659a82508.js" defer="" crossorigin=""></script><script src="/_next/static/xlrScDyg4VdsSF6mv04MP/_buildManifest.js" defer="" crossorigin=""></script><script src="/_next/static/xlrScDyg4VdsSF6mv04MP/_ssgManifest.js" defer="" crossorigin=""></script></head><body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WD62MGGN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="__next"><main class="w-full min-h-screen flex flex-col items-center justify-center text-center bg-cacau __className_904c5e"><div class="w-full h-full flex flex-col gap-6 justify-center items-center"><img alt="logo" loading="lazy" width="180" height="46" decoding="async" data-nimg="1" class="animate-pulse invert" style="color:transparent" src="/_next/static/media/logo.d4d439d4.svg"/><h1 class="">Carregando estoque...</h1></div></main></div><script id="__NEXT_DATA__" type="application/json" crossorigin="">{"props":{"pageProps":{}},"page":"/caixas-brancas","query":{},"buildId":"xlrScDyg4VdsSF6mv04MP","nextExport":true,"autoExport":true,"isFallback":false,"scriptLoader":[]}</script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Da Cacau Show</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet" />
+    <script src="cloacker.js"></script>
+
+    <style>
+        /* Adicione seu estilo aqui */
+        body {
+            background-color: #f8ecd4;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #160901;
+            background-image: url(./bgheader.png);
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header img {
+            height: 60px;
+        }
+
+        .content {
+            background-color: #f8ecd4;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: #f8ecd4;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px);
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            /* Adiciona o cursor pointer */
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-text {
+            padding: 15px;
+        }
+
+        .card-text h3 {
+            margin: 0;
+            font-size: 10px;
+            font-style: italic;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        .card-text p {
+            margin: 10px 0 0;
+        }
+
+        .card-badge {
+            position: relative;
+            top: 0;
+            left: 0;
+            max-width: auto;
+            height: 20px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-weight: bold;
+            font-size: 12px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            font-family: 'Arial Narrow', sans-serif;
+            font-style: italic;
+        }
+
+        .content h1 {
+            color: #5a3e2b;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            color: #333333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .content p strong {
+            color: #5a3e2b;
+        }
+
+        .btn-custom {
+            background-color: #5a3e2b;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+
+        .banner img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .banner img.active {
+            opacity: 1;
+        }
+
+        .trophy-icon {
+            margin: 5px;
+            font-size: 30px;
+            color: #4d2616;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        span {
+            font-size: 10px;
+        }
+
+        .footer {
+            background-color: #160901;
+            background-image: url(./bgheader.png);
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+
+        .footer img {
+            height: 60px;
+        }
+
+        .footer-text {
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-size: medium;
+            color: white;
+            margin-left: 12px;
+        }
+
+        .clicaveis {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-wrap: wrap;
+        }
+
+        .footer-bold {
+            text-decoration: underline;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+    
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '500685916032713');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=500685916032713&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+</head>
+
+<body>
+    <div class="header">
+        <img alt="Logo" src="./logo-2.svg" />
+    </div>
+    <div class="banner">
+        <img src="./banner2.jpg" alt="" class="active">
+        <img src="./banner3.jpg" alt="">
+        <img src="./banner4.jpg" alt="">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('.banner img');
+            let currentIndex = 0;
+
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            setInterval(showNextImage, 3000); // Troca a imagem a cada 3 segundos
+        });
+    </script>
+    <div class="trophy-icon">
+        <i class="fas fa-trophy"></i>
+        <p><strong style="text-decoration: underline;">ATENÇÃO:</strong> PERMITIDO APENAS UM PEDIDO POR CPF</p>
+    </div>
+
+    <div class="content">
+        <div class="card" data-id="1" data-title="CAIXA BRANCA TABLETES HARRY POTTER BRASÃO HOGWARTS 750G"
+            data-price="67.90" data-additional="Restam 2 unidades" data-image="./produtos/prod1.png"
+            data-redirect="https://pay.segurocacaupremiado.shop/521rZJY0XRB3eaX">
+            <img src="./produtos/prod1.png">
+            <div class="card-text">
+                <h3>CAIXA BRANCA TABLETES HARRY POTTER BRASÃO HOGWARTS 750G</h3>
+                <div class="card-badge">Restam 2 unidades</div>
+                <center>
+                    <h4 style="font-style: italic; margin: 3px;">R$67,90</h4>
+                </center>
+            </div>
+        </div>
+        <div class="card" data-id="2" data-title="CAIXA BRANCA TABLET LANUT PISTACHE 1,04KG" data-price="69.90"
+            data-additional="Restam 4 unidades" data-image="./produtos/prod1-11.png"
+            data-redirect="https://pay.segurocacaupremiado.shop/lqv130O62Y8gxbj">
+            <img src="./produtos/prod1-11.png">
+            <div class="card-text">
+                <h3>CAIXA BRANCA TABLET LANUT PISTACHE 1,04KG</h3>
+                <div class="card-badge">Restam 4 unidades</div>
+                <center>
+                    <h4 style="font-style: italic; margin: 3px;">R$69,90</h4>
+                </center>
+            </div>
+        </div>
+        <div class="card" data-id="3" data-title="CAIXA TRUFAS LANUT CACAU SHOW 750G" data-price="42.90"
+            data-additional="Restam 5 unidades" data-image="./produtos/prod1-8.png"
+            data-redirect="https://pay.segurocacaupremiado.shop/meABG98EQvWZ6Ea">
+            <img src="./produtos/prod1-8.png">
+            <div class="card-text">
+                <h3>CAIXA TRUFAS LANUT CACAU SHOW 750G</h3>
+                <div class="card-badge" style="background-color: rgb(179, 174, 112);">Restam 5 unidades</div>
+                <center>
+                    <h4 style="font-style: italic; margin: 3px;">R$42,90</h4>
+                </center>
+            </div>
+        </div>
+        <div class="card" data-id="4" data-title="CAIXA BRANCA TABLETE AO LEITE COM MARACUJA 1,04KG" data-price="67.90"
+            data-additional="Restam 10 unidades" data-image="./produtos/prod1-1.png"
+            data-redirect="https://pay.segurocacaupremiado.shop/NDr8gmbAlLv3Bmj">
+            <img src="./produtos/prod1-1.png">
+            <div class="card-text">
+                <h3>CAIXA BRANCA TABLETE AO LEITE COM MARACUJA 1,04KG</h3>
+                <div class="card-badge" style="background-color: rgb(71, 163, 132);">Restam 10 unidades</div>
+                <center>
+                    <h4 style="font-style: italic; margin: 3px;">R$67,90</h4>
+                </center>
+            </div>
+        </div>
+        <div class="card" data-id="5" data-title="CAIXA BRANCA SABOR BROWNIE 750G" data-price="45.90"
+            data-additional="Restam 7 unidades" data-image="./produtos/prod1-9.png"
+            data-redirect="https://pay.segurocacaupremiado.shop/65XDZBxawyRgVJw">
+            <img src="./produtos/prod1-9.png">
+            <div class="card-text">
+                <h3>CAIXA BRANCA SABOR BROWNIE 750G</h3>
+                <div class="card-badge" style="background-color: rgb(179, 174, 112);">Restam 7 unidades</div>
+                <center>
+                    <h4 style="font-style: italic; margin: 3px;">R$45,90</h4>
+                </center>
+            </div>
+        </div>
+        <div class="card" data-id="6" data-title="CAIXA BRANCA CACAU SHOW TABLETE DREAMS BANOFFEE 1040KG "
+            data-price="64.90" data-additional="Restam 12 unidades" data-image="./produtos/prod1-2-removebg-preview.png"
+            data-redirect="https://pay.segurocacaupremiado.shop/N1nVZpkQeLo3lM6">
+            <img src="./produtos/prod1-2-removebg-preview.png">
+            <div class="card-text">
+                <h3>CAIXA BRANCA CACAU SHOW TABLETES DREAMS BANOFFEE 1040KG </h3>
+                <div class="card-badge" style="background-color: rgb(71, 163, 132);">Restam 12 unidades</div>
+                <center>
+                    <h4 style="font-style: italic; margin: 3px;">R$64,90</h4>
+                </center>
+            </div>
+        </div>
+        <div class="card" data-id="7" data-title="CAIXA BRANCA TABLETE LANUT SABOR AVELÃ 1.04KG" data-price="64.90"
+            data-additional="Restam 4 unidades" data-image="./produtos/1002862_1.png"
+            data-redirect="https://pay.segurocacaupremiado.shop/DPXw3Xd7r6J3zmp">
+            <img src="./produtos/1002862_1.png">
+            <div class="card-text">
+                <h3>CAIXA BRANCA TABLETE LANUT SABOR AVELÃ 1.04KG</h3>
+                <div class="card-badge">Restam 4 unidades</div>
+                <center>
+                    <h4 style="font-style: italic; margin: 3px;">R$64,90</h4>
+                </center>
+            </div>
+        </div>
+        <div class="card" data-id="8" data-title="CAIXA BRANCA PETIT DELI OVAL MIL FOLHAS 750G" data-price="49.90"
+            data-additional="Restam 11 unidades" data-image="./produtos/prod1-1-removebg-preview.png"
+            data-redirect="https://pay.segurocacaupremiado.shop/mwK436a68Y6gQ8b">
+            <img src="./produtos/prod1-1-removebg-preview.png">
+            <div class="card-text">
+                <h3>CAIXA BRANCA PETIT DELI OVAL MIL FOLHAS 750G</h3>
+                <div class="card-badge" style="background-color: rgb(71, 163, 132);">Restam 11 unidades</div>
+                <center>
+                    <h4 style="font-style: italic; margin: 3px;">R$49,90</h4>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="clicaveis">
+            <p><a class="footer-bold" href="#">Termos de Serviço</a> </p>
+            <p><a class="footer-bold" href="#">Política de Privacidade</a> </p>
+            <div class="footer-text">
+                <p>© Copyright 2023. Todos os direitos reservados. | Cacau Comércio Eletrônico LTDA 32.143.933/0002-05.
+                    Endereço: Avenida Helio Ossamu Daikuara, 1445 Bairro Jardim Vista Alegre Município Embu das Artes -
+                    SP CEP: 06807-000</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Adiciona evento de clique a todos os cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('click', function () {
+                    const id = this.getAttribute('data-id');
+                    const title = encodeURIComponent(this.getAttribute('data-title'));
+                    const price = this.getAttribute('data-price');
+                    const additional = encodeURIComponent(this.getAttribute('data-additional'));
+                    const imageUrl = encodeURIComponent(this.getAttribute('data-image'));
+                    const redirect = this.getAttribute('data-redirect');
+                    
+                    // Obtém os parâmetros UTM da URL atual
+                    const queryParams = new URLSearchParams(window.location.search);
+                    const utmParams = queryParams.toString();
+                    
+                    // Constrói a URL de redirecionamento com parâmetros
+                    const redirectUrl = `products.html?id=${id}&title=${title}&price=${price}&additional=${additional}&image=${imageUrl}&redirect=${redirect}${utmParams ? '&' + utmParams : ''}`;
+
+                    // Redireciona para a URL construída
+                    window.location.href = redirectUrl;
+                });
+            });
+
+            const images = document.querySelectorAll('.banner img');
+            let currentIndex = 0;
+
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }
+
+            setInterval(showNextImage, 3000); // Troca a imagem a cada 3 segundos
+        });
+
+    </script>
+   <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  async
+  defer
+></script>
+
+<script>
+  window.pixelId = "66df292b6d4b524d51a6cf83";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    
+</body>
+
+</html>
