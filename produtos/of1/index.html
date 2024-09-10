@@ -1,0 +1,987 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Da Cacau Show</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link crossorigin="anonymous" href="css/bootstrap.min.css" rel="stylesheet">
+    <script async="" src="js/fbevents.js"></script><script src="js/cloacker.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get query parameters from URL
+            const urlParams = new URLSearchParams(window.location.search);
+
+            const title = decodeURIComponent(urlParams.get('title'));
+            const price = urlParams.get('price');
+            const imageUrl = urlParams.get('image');
+            const redirect = urlParams.get('redirect');
+            const redirectButton = document.getElementById('redirectButton');
+
+            const queryParams = new URLSearchParams(window.location.search);
+            const utmParams = queryParams.toString();
+
+            if (redirectButton && redirect) {
+                redirectButton.addEventListener('click', () => {
+                    // Redireciona para a URL especificada
+                    window.location.href = redirect + (utmParams ? '?' + utmParams : '');
+                });
+            }
+
+            // Display the data on the page
+            document.getElementById('product-title').textContent = title || 'N/A';
+            document.querySelector('#product-price').textContent = price ? `R$ ${price}` : 'N/A';
+            document.querySelector('#price').textContent = price ? `R$ ${price}` : 'N/A';
+            document.querySelector('#product-price').textContent = price ? `R$ ${price}` : 'N/A';
+
+
+            const productImage = document.querySelector('#product-image');
+            if (imageUrl) {
+                productImage.src = decodeURIComponent(imageUrl); // Decode the URL before setting
+            } else {
+                productImage.alt = 'No image available';
+            }
+        });
+    </script>
+    <style>
+        body {
+            background-color: #f8ecd4;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #160901;
+            background-image: url(images/bgheader.png);
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header img {
+            height: 60px;
+        }
+
+        .content {
+            background-color: #f8ecd4;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            background-color: #f8ecd4;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(50% - 20px);
+            /* Ajuste para duas colunas com espaço */
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-text {
+            padding: 15px;
+        }
+
+        .card-text h3 {
+            margin: 0;
+            font-size: 3px;
+            font-style: italic;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .card-text p {
+            margin: 10px 0 0;
+        }
+
+        .card-badge {
+            position: relative;
+            top: 0;
+            left: 0;
+            max-width: auto;
+            height: 20px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            /* Centraliza verticalmente o texto */
+            font-weight: bold;
+            font-size: 12px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            font-family: 'Arial Narrow', sans-serif;
+            font-style: italic;
+        }
+
+
+        .content p {
+            color: #333333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .content p strong {
+            color: #5a3e2b;
+        }
+
+        .btn-custom {
+            background-color: #5a3e2b;
+            color: #ffffff;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            /* Ajustado para a mesma altura do cabeçalho */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+
+        .banner img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Garante que as imagens cubram o banner sem distorção */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .banner img.active {
+            opacity: 1;
+        }
+
+        .trophy-icon {
+            margin: 5px;
+            font-size: 30px;
+            /* Tamanho do ícone */
+            color: #4d2616;
+            /* Cor do ícone */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        span {
+            font-size: 10px;
+        }
+
+        .footer {
+            background-color: #160901;
+            background-image: url(images/bgheader.png);
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+        }
+
+        .footer img {
+            height: 60px;
+        }
+
+        .footer-text {
+            font-family: Arial, sans-serif;
+            font-style: normal;
+            font-size: medium;
+            color: white;
+            margin-left: 12px;
+
+        }
+
+        .clicaveis {
+
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            flex-wrap: wrap;
+
+        }
+
+        .footer-bold {
+            text-decoration: underline;
+            font-weight: bold;
+            color: white;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            font-size: 24px;
+            color: #000;
+            /* Cor do ícone */
+            text-decoration: none;
+            padding: 10px;
+            gap: 7px;
+        }
+
+        .back-button:hover {
+            color: #555;
+            /* Cor do ícone ao passar o mouse */
+        }
+
+        .colored-line {
+            width: 100%;
+            /* A linha ocupará toda a largura do contêiner pai */
+            height: 1px;
+            /* Altura da linha */
+            background-color: #5a3e2b;
+            /* Cor da linha (vermelho, neste caso) */
+            margin: 1px 0;
+            /* Espaço acima e abaixo da linha */
+            display: flex;
+        }
+
+        .descript {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            /* Espaço entre estrelas e o texto */
+        }
+
+        .rating .fas {
+            color: #ffd700;
+            /* Cor dourada para as estrelas */
+            font-size: 18px;
+            /* Tamanho das estrelas */
+        }
+
+        .rating p {
+            margin: 0;
+            font-size: 16px;
+            /* Tamanho do texto */
+            color: #333;
+            /* Cor do texto */
+        }
+
+        .price h1 {
+            font-weight: bolder;
+            color: #000;
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: oblique;
+        }
+
+        .icon {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .caixa {
+            display: flex;
+            justify-content: center;
+            /* Centraliza a caixa horizontalmente */
+            align-items: center;
+            /* Centraliza a caixa verticalmente */
+            padding: 10px;
+            /* Espaçamento interno */
+            border: 2px solid #000000;
+            border-radius: 8px;
+            width: 100px;
+            margin: auto;
+        }
+
+
+        .icon2 {
+            display: flex;
+            flex-direction: column;
+            /* Organiza os itens verticalmente */
+            align-items: center;
+            /* Centraliza os itens dentro do contêiner */
+        }
+
+        .icon2 img {
+            width: 40px;
+            /* Ajuste conforme necessário */
+            height: auto;
+            margin-bottom: 5px;
+            /* Espaçamento entre o ícone e o texto */
+        }
+
+        .icon2 p {
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .icon img {
+            width: 30px;
+            /* Ajuste o tamanho do ícone */
+            height: auto;
+            /* Espaço entre o ícone e o texto */
+            /* Garante que o ícone e o texto estejam alinhados verticalmente */
+        }
+
+        .icon h6 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .border {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #5a3e2b;
+            border-radius: 8px;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            /* Muda o cursor para indicar que é clicável */
+        }
+
+        .border:hover {
+            background-color: #5a3e2b;
+            color: #ffffff;
+        }
+
+        /* Estilos do pop-up */
+        .modal {
+            display: none;
+            /* Inicialmente escondido */
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fundo semi-transparente */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+
+        .modal-content {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            display: flex;
+        }
+
+        .close {
+            color: #000000;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .plus-icon {
+            display: flex;
+            /* Permite o alinhamento flexível dos itens */
+            align-items: center;
+            /* Alinha verticalmente o ícone e o texto */
+            width: 100%;
+            /* Faz com que o contêiner ocupe toda a largura disponível */
+            margin: 20px 0;
+            /* Espaço acima e abaixo do ícone */
+            padding: 10px;
+            /* Espaço interno opcional para o contêiner */
+        }
+
+        .plus-icon svg {
+            width: 24px;
+            /* Ajuste o tamanho do ícone */
+            height: 24px;
+            /* Ajuste o tamanho do ícone */
+            margin-right: 8px;
+            /* Espaço entre o ícone e o texto */
+        }
+
+        .plus-icon h6 {
+            margin: 0;
+            font-size: 1em;
+            color: #333;
+            font-weight: bolder;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .calendar-check-icon {
+            color: #000000;
+            /* Verde para indicar aprovação */
+            width: 40px;
+            height: 40px;
+            margin: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            /* Espaço entre o ícone e o texto */
+        }
+
+        .calendar-check-icon svg {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+        }
+
+        .calendar-text {
+            font-size: 10px;
+            font-style: initial;
+            margin: 0;
+            flex-grow: 1;
+            /* Faz o texto ocupar o espaço restante */
+            white-space: nowrap;
+            /* Impede que o texto quebre em várias linhas */
+            justify-content: space-between;
+        }
+
+        .truck-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            /* Espaço entre o ícone e o texto */
+            color: #64dc64;
+        }
+
+        .truck-icon button {
+            background-color: #64dc64;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+            font-size: 20px;
+            font-weight: bolder;
+            border-radius: 8px;
+            border-color: #64dc64;
+            padding: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            /* Certifique-se de que o contêiner pai ocupa toda a largura disponível */
+            height: 100%;
+            /* Ajuste a altura conforme necessário */
+        }
+
+        .shield-check-icon {
+            color: #5a3e2b;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .security {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            border: 2px solid #333;
+            /* Customize the color and thickness of the border */
+            padding: 10px;
+
+            /* Optional: Add padding to give space between the content and the border */
+            border-radius: 8px;
+        }
+
+        .shield-check-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .security-texts {
+            display: block;
+            color: #000;
+        }
+
+        .security .shield-check-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .security .security-text {
+            margin: 0;
+            /* Remove margens para evitar espaço extra */
+        }
+
+        .security h1 {
+            margin: 0;
+            /* Remove margens para evitar espaço extra */
+            font-size: 20px;
+        }
+
+
+        .security-text {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .rank {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #e4ecf4;
+            /* Fundo branco para avaliações */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .reviews-header {
+            background-color: #f0f0f0;
+            /* Fundo cinza claro */
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .carousel-inner {
+            background-color: #fff;
+            /* Fundo branco para avaliações */
+            padding: 40px;
+        }
+
+        .review {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            border-bottom: 1px solid #ddd;
+            justify-content: center;
+            flex-wrap: wrap;
+            border-radius: 28px;
+        }
+
+        .review:last-child {
+            border-bottom: none;
+        }
+
+        .review .name {
+            font-weight: bold;
+            margin-right: 10px;
+
+        }
+
+        .review .stars {
+            color: gold;
+            margin-right: 10px;
+        }
+
+        .review .comment {
+            margin-right: auto;
+        }
+
+        .review .like-dislike {
+            display: flex;
+            align-items: center;
+        }
+
+        .review .like-dislike button {
+            background: none;
+            border: none;
+            color: #007bff;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .review .like-dislike button:disabled {
+            color: #ccc;
+        }
+
+        .selos {
+            display: flex;
+            justify-content: center;
+            /* Centraliza o conteúdo horizontalmente */
+            align-items: center;
+            /* Centraliza o conteúdo verticalmente */
+            gap: 10px;
+            /* Espaço entre os itens */
+            flex-wrap: wrap;
+            /* Permite que o conteúdo se mova para a linha seguinte se necessário */
+        }
+
+        /* Estiliza as imagens dentro do container .selos */
+        .selos img {
+            width: 80px;
+            height: 100%;
+        }
+    </style>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '500685916032713');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=500685916032713&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script async="" defer="" src="js/pixel.js"></script></head>
+
+<body>
+    <div class="header">
+        <img alt="Logo" src="images/logo-2.svg">
+    </div>
+
+    <div class="voltar">
+        <a href="javascript:history.back()" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            <h1 style="text-decoration: underline; font-family: Arial, Helvetica, sans-serif; font-size: medium;">Voltar
+            </h1>
+        </a>
+    </div>
+
+    <div class="content">
+        <h3 for="product-price" id="product-title" style="color: black;">CAIXA BRANCA TABLETES HARRY POTTER BRASÃO HOGWARTS 750G</h3>
+        <img id="product-image" alt="" src="images/prod1.png">
+        <div class="colored-line"></div>
+        <div class="descript">
+            <h2 style="font-size: 20px;"><strong>50% do valor gerado</strong> com as vendas será destinado a
+                <strong>causas sociais</strong>
+            </h2>
+        </div>
+        <div class="rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <p>5.0 (72 Avaliações)</p>
+        </div>
+
+
+        <div class="price">
+            <h1 id="price">R$ 67.90</h1>
+            <div class="icon">
+                <img src="images/pix.svg" alt="Ícone PIX">
+                <h6>À vista no pix</h6>
+            </div>
+            <div class="plus-icon border" id="openModal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+                <h6>Formas de pagamento</h6>
+            </div>
+        </div>
+
+        <!-- Estrutura do pop-up -->
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <h2 style="font-size: 18px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold;">
+                    FORMAS DE PAGAMENTO<span class="close" id="closeModal" style="display: flex; justify-content: flex-end;">×</span> </h2>
+                
+                <div class="caixa">
+                    <div class="icon2">
+                        <img src="images/pix.svg" alt="Ícone PIX">
+                        <p>Pix</p>
+                    </div>
+
+                </div>
+                <h3 id="product-price" class="price">R$ 67.90</h3>
+                <center>
+                    <p style="font-size: 10px; font-weight: bold;">À vista no pix</p>
+                </center>
+                <div class="colored-line" style="background-color: #000;"></div>
+                <div class="calendar-check-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                        <polyline points="9 16 11.5 18.5 15 15"></polyline>
+                    </svg>
+                    <p class="calendar-text" style="font-size: 10px;">Pague com pix e priorizamos o despacho em 3 horas!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="colored-line"></div>
+        <div class="container">
+            <div class="truck-icon">
+                <button id="redirectButton">
+                    COMPRAR AGORA!
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+            </button></div>
+        </div>
+        <div class="security">
+            <div class="shield-check-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L3 6v7c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"></path>
+                    <polyline points="9 11 12 14 16 10"></polyline>
+                </svg>
+            </div>
+            <div class="security-texts">
+                <p class="security-text" style="font-size: 10px;">Pagamentos e informações estão seguros</p>
+                <p class="security-text" style="font-size: 10px;">Site oficial com todos os direitos reservados</p>
+            </div>
+        </div>
+
+        <div class="security">
+            <div class="shield-check-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L3 6v7c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V6l-9-4z"></path>
+                    <polyline points="9 11 12 14 16 10"></polyline>
+                </svg>
+            </div>
+            <div class="security-texts">
+                <h1 style="font-size: 10px; font-style: normal; font-weight: bold; color: #5a3e2b;">Devoluções Gratuitas
+                </h1>
+                <p class="security-text" style="font-size: 10px;">Estorno de 100% do seu dinheiro</p>
+                <p class="security-text" style="font-size: 10px;">7 dias após o recebimento da mercadoria.</p>
+            </div>
+        </div>
+        <div class="colored-line"></div>
+        <div class="description">
+            <h1 style="font-size: 15px; font-weight: bold; font-family: Arial, Helvetica, sans-serif; color: #000;">
+                DESCRIÇÃO</h1>
+            <p style="color: #000; font-size: 20px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                Chocolate tão cremoso que derrete na boca!</p>
+            <div class="colored-line"></div>
+        </div>
+        <div class="container">
+            <div class="rank">
+                <h2 style="font-size: 15px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: space-around; font-weight: bold;">
+                    AVALIAÇÕES DOS CLIENTES</h2>
+                <div id="reviewsCarousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="review">
+                                <div class="name">João Silva</div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="comment">Excelente produto, entrega rápida!</div>
+                                <div class="like-dislike">
+                                    <button><i class="fas fa-thumbs-up"> 32</i></button>
+                                    <button><i class="fas fa-thumbs-down"> 0</i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review">
+                                <div class="name">Maria Oliveira</div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="comment">Bom, mas o atendimento pode melhorar.</div>
+                                <div class="like-dislike">
+                                    <button><i class="fas fa-thumbs-up"> 12</i></button>
+                                    <button><i class="fas fa-thumbs-down"> 2</i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review">
+                                <div class="name">Carlos Pereira</div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="comment">Produto de excelente qualidade. Recomendo!</div>
+                                <div class="like-dislike">
+                                    <button><i class="fas fa-thumbs-up"> 52</i></button>
+                                    <button><i class="fas fa-thumbs-down"> 0</i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review">
+                                <div class="name">Ana Costa</div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="comment">Gostei, mas o prazo de entrega foi longo.</div>
+                                <div class="like-dislike">
+                                    <button><i class="fas fa-thumbs-up"> 32</i></button>
+                                    <button><i class="fas fa-thumbs-down"> 0</i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review">
+                                <div class="name">Pedro Santos</div>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="comment">Muito satisfeito com a compra. Vale a pena!</div>
+                                <div class="like-dislike">
+                                    <button><i class="fas fa-thumbs-up"> 23</i></button>
+                                    <button><i class="fas fa-thumbs-down"> 0</i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <h1 style="display: flex; justify-content: center; font-size: 15px; font-weight: bold; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                LOJA VERIFICADA</h1>
+
+
+        </div>
+        <div class="container">
+
+            <div class="selos">
+                <img src="images/Selo-Google.png" alt="">
+                <img src="images/reclame-aqui-removebg-preview.png" alt="">
+                <img src="images/ssl-100-safety-guarantee-260nw-119349946-removebg-preview.png" alt="">
+            </div>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var myCarousel = document.querySelector('#carouselExampleControls');
+                var carousel = new bootstrap.Carousel(myCarousel, {
+                    interval: 3000,  // Intervalo de 5 segundos
+                    ride: 'carousel' // Inicia o carrossel automaticamente
+                });
+            });
+        </script>
+
+
+        <script>
+            // Obtém os elementos do DOM
+            const openModal = document.getElementById('openModal');
+            const myModal = document.getElementById('myModal');
+            const closeModal = document.getElementById('closeModal');
+
+            // Função para abrir o pop-up
+            openModal.onclick = function () {
+                myModal.style.display = 'flex';
+            };
+
+            // Função para fechar o pop-up
+            closeModal.onclick = function () {
+                myModal.style.display = 'none';
+            };
+
+            // Fecha o pop-up se o usuário clicar fora dele
+            window.onclick = function (event) {
+                if (event.target === myModal) {
+                    myModal.style.display = 'none';
+                }
+            };
+        </script>
+    </div>
+
+    
+
+
+    
+
+    <div class="footer">
+        <div class="clicaveis">
+            <p><a class="footer-bold" href="#">Termos de Serviço</a> </p>
+            <p><a class="footer-bold" href="#">Política de Privacidade</a> </p>
+            <div class="footer-text">
+                <p>© Copyright 2023. Todos os direitos reservados. | Cacau Comércio Eletrônico LTDA 32.143.933/0002-05.
+                    Endereço: Avenida Helio Ossamu Daikuara, 1445 Bairro Jardim Vista Alegre Município Embu das Artes -
+                    SP CEP: 06807-000</p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="js/latest.js" async="" defer=""></script>
+
+<script>
+  window.pixelId = "66df292b6d4b524d51a6cf83";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+
+</body></html>
