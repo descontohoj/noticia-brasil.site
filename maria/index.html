@@ -629,17 +629,12 @@ src="https://www.facebook.com/tr?id=358773080107127&ev=PageView&noscript=1"
                 loadingMessage.style.display = 'none';
                 message.style.display = 'block';
 
-                // Fetch the content of the external page and inject it into the current page
-                fetch('https://noticia-brasil.site/maria/ofertas')
-                    .then(response => response.text())
-                    .then(data => {
-                        content.innerHTML = data;
-                        content.style.display = 'block';
-                    })
-                    .catch(() => {
-                        content.innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
-                        content.style.display = 'block';
-                    });
+                // Cria o iframe e define a URL
+                var iframe = document.createElement('iframe');
+                iframe.src = 'https://noticia-brasil.site/maria/ofertas';
+                content.innerHTML = ''; // Limpa o conteúdo anterior, se houver
+                content.appendChild(iframe);
+                content.style.display = 'block';
             }, 3000);
         }
     </script>
