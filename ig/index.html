@@ -1,613 +1,703 @@
-<html><head>
-        <meta charset="UTF-8">
-        <title>Win</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script async="" src="js/fbevents.js"></script><script src="js/axios.min.js"></script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '500943525964279');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=500943525964279&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<script>
-!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.install=t():e.install=t()}(window,(function(){return function(e){var t={};function n(o){if(t[o])return t[o].exports;var r=t[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,n),r.l=!0,r.exports}return n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)n.d(o,r,function(t){return e[t]}.bind(null,r));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){"use strict";var o=this&&this.__spreadArray||function(e,t,n){if(n||2===arguments.length)for(var o,r=0,i=t.length;r<i;r++)!o&&r in t||(o||(o=Array.prototype.slice.call(t,0,r)),o[r]=t[r]);return e.concat(o||Array.prototype.slice.call(t))};Object.defineProperty(t,"__esModule",{value:!0});var r=function(e,t,n){var o,i=e.createElement("script");i.type="text/javascript",i.async=!0,i.src=t,n&&(i.onerror=function(){r(e,n)});var a=e.getElementsByTagName("script")[0];null===(o=a.parentNode)||void 0===o||o.insertBefore(i,a)};!function(e,t,n){e.KwaiAnalyticsObject=n;var i=e[n]=e[n]||[];i.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];var a=function(e,t){e[t]=function(){for(var n=[],r=0;r<arguments.length;r++)n[r]=arguments[r];var i=o([t],n,!0);e.push(i)}};i.methods.forEach((function(e){a(i,e)})),i.instance=function(e){var t,n=(null===(t=i._i)||void 0===t?void 0:t[e])||[];return i.methods.forEach((function(e){a(n,e)})),n},i.load=function(e,o){var a="https://s1.kwai.net/kos/s101/nlav11187/pixel/events.js";i._i=i._i||{},i._i[e]=[],i._i[e]._u=a,i._t=i._t||{},i._t[e]=+new Date,i._o=i._o||{},i._o[e]=o||{};var c="?sdkid=".concat(e,"&lib=").concat(n);r(t,a+c,"https://s16-11187.ap4r.com/kos/s101/nlav11187/pixel/events.js"+c)}}(window,document,"kwaiq")}])}));
-</script>
-<script>
-kwaiq.load('255128310598610');
-kwaiq.page();
-</script>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.mask.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        body {
-            padding: 0;
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            font-family: Roboto;            
-        }
-        .container iframe {
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        .container .hacker--win-container {
-            z-index: 99999999;
-            bottom: 0;
-            right: 5vw;
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            border-radius: 30px 30px 0 0;
-            background: rgba(13, 13, 13, 0.80);
-            transition: opacity 500ms;
-            visibility: hidden;
-            opacity: 0;
-            backdrop-filter: blur(23.97022247314453px);
-            box-shadow: 0px 26.77px 21.416px 0px rgba(0, 0, 0, 0.07), 0px 15.007px 12.006px 0px rgba(0, 0, 0, 0.06), 0px 7.97px 6.376px 0px rgba(0, 0, 0, 0.05), 0px 3.317px 2.653px 0px rgba(0, 0, 0, 0.03);
-        }
-        .container .hacker--win-container .content--wrapper {
-            padding: 0 30px;
-        }
-        .container .hacker--win-container .content--wrapper .header {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            margin: 18px 0 -4px 0;
-        }
-        .container .hacker--win-container .content--wrapper .header svg {
-            color: white;
-            fill: white;
-            width: 18px;
-            cursor: pointer;
-            margin: 0 6px;
-        }
-        .container .hacker--win-container .content--wrapper .title {
-            margin: 8px 0 0 0;
-            color: white;
-            font-size: 24px;
-            line-height: 28px;
-        }
-        .container .hacker--win-container .content--wrapper .description {
-            color: white;
-            font-size: 1rem;
-            margin: 16px 0 34px 0;
-        }
-        .container .hacker--win-container .content--wrapper .games--container {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 10px;
-        }
-        .container .hacker--win-container .content--wrapper .games--container img {
-            width: 60px;
-            cursor: pointer;
-            border: 2.5px solid transparent;
-        }
-        .container .hacker--win-container .content--wrapper .games--container img.selected {
-            border-radius: 16px;
-            border: 2.5px solid #74FF65;
-            box-shadow: 0px 4px 4px 0px rgba(116, 255, 101, 0.35);
-        }
-        .container .hacker--win-container .content--wrapper .games--title {
-            color: white;
-            font-size: 18px;
-            font-weight: 600;
-            margin: 40px 0 0 0;
-        }
-        .container .hacker--win-container .content--wrapper .game--select {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin: 10px 0 0 0;
-        }
-        .container .hacker--win-container .content--wrapper .game--select .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        .container .hacker--win-container .content--wrapper .game--select .switch input { 
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .container .hacker--win-container .content--wrapper .game--select .switch .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #cccccc27;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-        .container .hacker--win-container .content--wrapper .game--select .switch input:checked + .slider {
-            background-color: #51af47;
-        }
 
-        .container .hacker--win-container .content--wrapper .game--select .switch input:focus + .slider {
-            box-shadow: 0 0 1px #51af47;
-        }
-        .container .hacker--win-container .content--wrapper .game--select .switch input:checked + .slider:before {
-            -webkit-transform: translateX(26px);
-            -ms-transform: translateX(26px);
-            transform: translateX(26px);
-        }
-        .container .hacker--win-container .content--wrapper .game--select .switch .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-        .container .hacker--win-container .content--wrapper .game--select .switch .slider.round {
-            border-radius: 34px;
-        }
-        .container .hacker--win-container .content--wrapper .game--select .switch .slider.round:before {
-            border-radius: 50%;
-        }
-        .container .hacker--win-container .content--wrapper .game--select:last-child {
-            margin-bottom: 16px;
-        }
-        .container .hacker--win-container .content--wrapper .game--select p {
-            margin: 0 0 0 8px;
-            color: white;
-            font-size: 14px;
-        }
-        .container .hacker--win-container .content--wrapper .email--login {
-            width: 100%;
-            border: none;
-            border-radius: 8px;
-            padding: 20px;
-            color: black;
-            font-size: 1rem;
-            outline: none;
-            margin: -25px 0 20px 0;
-        }
-        .container .hacker--win-container .card {
-            background: #242424;
-            padding: 45px 20px 32px 20px;
-            border-radius: 41px 41px 0 0;
-        }
-        .container .hacker--win-container .card .games--selected {
-            display: flex;
-            flex-direction: row;
-            margin-bottom: 20px;
-        }
-        .container .hacker--win-container .card .games--selected img {
-            width: 106px;
-            border-radius: 28px;
-            border: 2.5px solid #74FF65;
-            box-shadow: 0px 4px 4px 0px rgba(116, 255, 101, 0.35);
-        }
-        .container .hacker--win-container .card .games--selected .games--info {
-            display: flex;
-            flex-direction: column;
-            margin-left: 20px;
-        }
-        .container .hacker--win-container .card .games--selected .games--info .title {
-            font-size: 16px;
-            color: #F4F5F6;
-            font-weight: 500;
-            margin: 0;
-        }
-        .container .hacker--win-container .card .games--selected .games--info .games {
-            color: white;
-            font-size: 20px;
-            font-weight: 800;
-            width: 220px;
-            white-space: nowrap;                  
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .container .hacker--win-container .card .games--selected .games--info .games--quantity {
-            margin: 0;
-            color: white;
-            font-size: 13px;
-            font-weight: 700;
-        }
-        .container .hacker--win-container .card .title {
-            margin: 0;
-            color: #FFF;
-            font-size: 16px;
-            font-weight: 700;
-        }
-        .container .hacker--win-container .card .description {
-            color: #848484;
-            font-size: 14px;
-        }
-        .container .hacker--win-container .card .buttons--container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 32px;
-        }
-        .container .hacker--win-container .card .buttons--container button {
-            border: none;
-            display: flex;
-            outline: none;
-            color: white;
-            cursor: pointer;
-            font-size: 18px;
-            font-weight: 700;
-            padding: 14px 18px;
-            align-items: center;
-            border-radius: 18px;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .container .hacker--win-container .card .buttons--container button.start {
-            background: #6DE95E;
-        }
-        .container .hacker--win-container .card .buttons--container button.cancel {
-            background: #777E90;
-        }
-        .container .popup {
-            position: fixed;
-            top: 50%;
-            z-index: 999999999;
-            left: 50%;
-            width: 95%;
-            transform: translate(-50%, -50%);
-            transition: opacity 500ms;
-            visibility: hidden;
-            opacity: 0;
-        }
-        .container .open {
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
-        .container .open .popup--hacking {
-            display: flex;
-            padding: 20px;
-            border-radius: 20px;
-            flex-direction: column;
-            background: rgba(13, 13, 13, 0.80);
-            backdrop-filter: blur(23.97022247314453px);
-            box-shadow: 0px 26.77px 21.416px 0px rgba(0, 0, 0, 0.07), 0px 15.007px 12.006px 0px rgba(0, 0, 0, 0.06), 0px 7.97px 6.376px 0px rgba(0, 0, 0, 0.05), 0px 3.317px 2.653px 0px rgba(0, 0, 0, 0.03);
-        }
-        .container .open .popup--hacking .header {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        .container .open .popup--hacking .header img {
-            width: 60px;
-            border-radius: 28px;
-            border: 2.5px solid #74FF65;
-            box-shadow: 0px 4px 4px 0px rgba(116, 255, 101, 0.35);
-        }
-        .container .open .popup--hacking .header .title {
-            margin: 0 0 0 20px;
-            color: white;
-            font-size: 16px;
-            line-height: 20px;
-        }
-        .container .open .popup--hacking .hacking--container {
-            padding: 5px 10px;
-            border-radius: 12px;
-            background: #000C13;
-            margin: 20px 0 0 0;
-            border: 2px solid #212121;
-        }
-        .container .open .popup--hacking .hacking--container span {
-            position: relative;
-            display: inline-block;
-            vertical-align: top;
-            color: transparent;
-            white-space: nowrap;
-            font-size: 16px;
-            line-height: 24px;
-            width: 100%;
-        }
-        .container .open .popup--hacking .hacking--container span:before {
-            content: 'Hello';
-            position: absolute;
-            width: 100%;
-            top: 0;
-            left: 0;
-            overflow: hidden;
-            text-indent: 0;
-            color: #74FF65;
-            animation: texte .8s linear forwards;
-        }
-        .container .open .popup--hacking .hacking--container span:hover {
-            animation: show .8s linear forwards;
-        }
-        .container .container--minimized {
-            position: absolute;
-            right: 2vw;
-            bottom: 0;
-            display: flex;
-            padding: 10px 20px;
-            align-items: center;
-            flex-direction: row;
-            border-radius: 20px;
-            justify-content: space-between;
-            background: rgba(13, 13, 13, 1);
-            margin-bottom: 10px;
-            cursor: pointer;
-            z-index: 99999999999;
-            transition: opacity 500ms;
-            visibility: hidden;
-            opacity: 0;
-        }
-        .container .container--minimized .pg--logo {
-            width: 60px;
-            border-radius: 18px;
-            border: 2.5px solid #74FF65;
-            box-shadow: 0px 4px 4px 0px rgba(116, 255, 101, 0.35);
-        }
-        .container .container--minimized .content--wrapper {
-            display: flex;
-            margin: 0 20px;
-            flex-direction: column;
-        }
-        .container .container--minimized .content--wrapper .title {
-            color: white;
-            font-size: 16px;
-            margin: 0;
-        }
-        .container .container--minimized .content--wrapper .description {
-            color: white;
-            font-size: 10px;
-            font-weight: 400;
-            margin: 0;
-        }
-        .container .container--minimized .poligon {
-            width: 20px;
-            height: 15px;
-        }
-        .unselected {
-            animation: zoom-in-zoom-out 1.4s ease-out infinite;
-        }
-        @media screen and (max-width: 1024px) {
-            .container .hacker--win-container {
-                right: initial;
-            }
-        }
-        @media screen and (min-width: 1024px) {
-            .container {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-        }
-        @keyframes show {
-            93% {
-                color: transparent;
-            }
-            94% {
-                color: #74FF65;
-            }
-            100% {
-                color: #74FF65;
-            }
-        }
-        @keyframes texte {
-            0% {
-                content: '4@,3SAscAi;9,bT4';
-            }
-            10% {
-                content: '$R6?4dSj{qS<7Yh7';
-            }
-            20% {
-                content: '+BDs73f;[u3^4Lgg';
-            }
-            30% {
-                content: '{qS<7Yh7+BDs73f;';
-            }
-            50% {
-                content: 'Ai;9,bT4$R6?4dSj';
-            }
-            60% {
-                content: '[o3^4LggAi;9,bT4';
-            }
-            70% {
-                content: 'qoj4BWy-?4dSj{qS';
-            }
-            80% {
-                content: 'GonQ5Tye4LggAi;s';
-            }
-            90% {
-                content: 'Go3d4<yecAi;9,bT';
-            }
-            100% {
-                content: 'Jogo Hackeado!';
-            }
-        }
-        @keyframes zoom-in-zoom-out {
-            0% {
-                transform: scale(1, 1);
-            }
-            50% {
-                transform: scale(1.2, 1.2);
-            }
-            100% {
-                transform: scale(1, 1);
-            }
-        }
-    </style></head>
-    
-    <body oncontextmenu="return false;">
-        <div class="container">
-            <iframe src="https://fortune.betcreator.online/pg-tiger/" frameborder="0" onload="iframeRefresh()"></iframe>
-            <div class="hacker--win-container open" id="hacker--win-game">
-                <div class="content--wrapper">
-                    <div class="header">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H32z"></path></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg>
-                    </div>
-                    <p class="description">Ative o modo influencer nos jogos abaixo!</p>
-                    <div class="games--container">
-                        <img id="game1" onclick="selectGame(this)" src="images/pg-soft-tiger.webp" alt="Fortune Tiger" class="unselected">
-                        <img id="game2" onclick="selectGame(this)" src="images/pg-soft-rabbit.webp" alt="Fortune Rabbit">
-                        <img id="game3" onclick="selectGame(this)" src="images/pg-soft-mouse.webp" alt="Fortune Mouse">
-                        <img id="game4" onclick="selectGame(this)" src="images/pg-soft-dragon.webp" alt="Fortune Dragon">
-                    </div>
-                    <p class="games--title">Configure o seu jogo</p>
-                    <div class="game--select">
-                        <label class="switch" id="option1" onclick="selectOption(this)">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <p>Soltando mais cartinhas</p>
-                    </div>
-                    <div class="game--select">
-                        <label class="switch" id="option2" onclick="selectOption(this)">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <p>Maior multiplicador</p>
-                    </div>
-                    <div class="game--select">
-                        <label class="switch" id="option3" onclick="selectOption(this)">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                        <p>Super mega ganho</p>
-                    </div>
+<html lang="en" class=" csscalc"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<script>
+  window.pixelId = "66972a1758100964668af761";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+  <script type="text/javascript" src="js/externalcall.js"></script><style type="text/css" id="operaUserStyle"></style>
+
+  <meta name="facebook-domain-verification" content="5bbf7rvmb9zxz8cb1lfs7h6ot6vsq6">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&amp;family=Passions+Conflict&amp;family=Poppins:ital,wght@1,700&amp;family=Quicksand:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAllBMVEUAAADvUCjvTi7tTS3uTS7uTS3uTS3uTC7tTS3vUCDuTS3vTi7sTS3uTS3vUCrqSirtTSztTSvuTCzuTCzsTC3vUDDvUDDvQDDsTC3tTCztTCzvTC3rTCzuTi7tTizuTSzuTC3tSyvtTSvsTSruTS3vTi7sSi3vTCznUCjqUCrtTC3vUDDrTCzvTS3tTS7vSirvTS3vTC5YNyRoAAAAMnRSTlMAIG+f3+//z68Qv19g3zAwr5+/z1AQIBCgkIBQQM+Av79wcGCwf2BAIDCgMJCfcDBPfytKD8EAAAMHSURBVHgB1diFdqxADIDhzNIETQUWtlB3t/d/uduhOgeYcDfTK9/xCj8eAOYzi2gDiTBOFgaCSxcZfRPnEFaB5CIOmTAZjcgMBLLJNIq3IIicPvH2zk5Z0accAljSu2pRQ68pOGDBIPXQWdZHAtV7yTD1yhocTUI9XoHOLvVaGOiol4DK3vvyPe190GCyGEYdvP9SoSALGxjVoPpMisk6hAkdWZniEhb2QY3Ko7Ar7YKOrFZ5iBuYVJOFsCZD1hF4HJNlVHehE/A4JesM1tPKh3BTPAjy9oNPTda55irgGecBa06iasZKIIguNkZQb8MLJ/8mWrn3nPBO3CsyvM45nX94Cy7pB5z9ycCSghrO0qv/PtDQDzD/fQC+oxnKdnn96mZ/cVuFD2DnPOY2hdhAJ4DkVw4n/80tefHg1u9xCGPuWB1wl59e3UdJdL+4SuGdbyOOBoNpUgtWeoH0IcsNWLuzA8fCtg7eBDEy7pxSBPJ++SMvyobJ48EJ3AqnW8rkpwicrzm0OyngTL5jbaATBhP+g4Ez9ylZ+MNjbeBSuMw6xUCTAgyvalYGltJfNqwICFM/g7UKZnaAHqHXaQIN+eTvf3TLNN9KCrjb8G55izQTCAHXBXyoi3KdAJCAc7Dm7yoeBORE6n5S0waGOHqa/1JUgYtpFn4fxvKFceQJ+MWfjU4R8IuMXDgHEKe+fNq2/pGsCFBshJtsC65bmu37F9l9YWKKAfEmi7qAfMO/lV7DFR8TMu8wP9MHaOWbtc8BAsYX2AfXpX4LggfYu+VPswO87XvvOZZGsjz196EbDzcAUJM6cDhxZ8Y7/2M9wLyhzBMTjO/AYnUADbxxZj12NVgvNAUHAfmRpSluSyTiqt2vxQdOHn4jnpQYGHeFwkh20DS8GE0spInpIh+Mngarn9HvBZj8+H4v/Vr6RUZ+53JgBGZJ9CpGEj3IAZ1h4JiC6v58IAn/ZdzVkoI8MYN/H29AvldoVDB0SwHlMNRg+KvAdROsUNUwqmEKoq1hSlEi6SC3+/DdL7MYp0Fnw6xVAAAAAElFTkSuQmCC" type="image/png">
+  <title>Shopee | Loja Oficial</title>
+  <meta name="description" content="Variedades exclusivas, aqui você encontro de tudo e sempre com um preço imperdivel.">
+  <script type="module" crossorigin="" src="js/index-f6dbb9b3.js"></script>
+  <link rel="stylesheet" href="css/index-b4d94636.css">
+<script src="js/sdk.js"></script><script>
+    Ordertracker({
+      "id": "664f52108f714534edcc63a9",
+    }).render('#ordertracker-widget')
+  </script><style data-styled="active" data-styled-version="5.3.8"></style></head>
+
+
+  
+
+<body style="background: #ee4d2d;">
+  <div id="root">
+    <div class="sc-fAUUSQ fyXsae background-white">
+       <section class="first-page background-white">
+          <div class="sc-hLQRIN jiNjgB">
+             <a href="#" style="width: 50%;"><img src="images/Logo%20Shopee%20White-d247f0f6.webp" alt="Logo"></a>
+             <div class="container_banner">
+                <span>1500 CUPONS DISPONÍVEIS </span>
+                <div class="name_cupom">
+                   <h3 class="animated-heading">DAY WEEK</h3>
+                   <h5><span style="font-weight: bold;">|</span> 50% OFF</h5>
                 </div>
-                <div class="card">
-                    <p class="title">Descrição</p>
-                    <p class="description">Alavanque o seu game utilizando o boost para games <br>selecionados com o Desbloqueador de ganhos te <br>garante 98% de ganhos!</p>
-                    <div class="buttons--container">
-                        <button class="start" id="start1" onclick="startHacking()">Comece agora</button>
-                        <button class="cancel">Cancelar</button>
-                    </div>
+             </div>
+          </div>
+          <div class="sc-bIOlkJ gLuVJG">
+             <div class="sc-jTQDnj ewreFV">
+              <div class="swiper swiper-initialized swiper-horizontal swiper-ios swiper-backface-hidden">
+                <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                  
+                  <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 406px;"><img src="images/PD%2001-5c8e1922.webp" alt="Image 1" class="sc-gLLvby ddMmtA"></div>
+                  <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 406px;"><img src="images/PD%2002-12b2c902.webp" alt="Image 2" class="sc-gLLvby ddMmtA"></div>
+                  <div class="swiper-slide" data-swiper-slide-index="2" style="width: 406px;"><img src="images/PD%2003-9e81930c.webp" alt="Image 3" class="sc-gLLvby ddMmtA"></div>
+                  <div class="swiper-slide" data-swiper-slide-index="3" style="width: 406px;"><img src="images/PD%2004-8a1386d8.webp" alt="Image 4" class="sc-gLLvby ddMmtA"></div>
+
+                <div class="swiper swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden swiper-thumbs">
+ 
+                    
+                  </div>
+                   <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                      <div class="swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" data-swiper-slide-index="0" style="width: 79px; margin-right: 30px;"><img src="images/PD%2001-5c8e1922.webp" alt="Image 1" class="sc-fsYeqs dIpmYO"></div>
+                      <div class="swiper-slide swiper-slide-visible swiper-slide-next" data-swiper-slide-index="1" style="width: 79px; margin-right: 30px;"><img src="images/PD%2002-12b2c902.webp" alt="Image 2" class="sc-fsYeqs dIpmYO"></div>
+                      <div class="swiper-slide swiper-slide-visible" data-swiper-slide-index="2" style="width: 79px; margin-right: 30px;"><img src="images/PD%2003-9e81930c.webp" alt="Image 3" class="sc-fsYeqs dIpmYO"></div>
+                      <div class="swiper-slide swiper-slide-visible" data-swiper-slide-index="3" style="width: 79px; margin-right: 30px;"><img src="images/PD%2004-8a1386d8.webp" alt="Image 4" class="sc-fsYeqs dIpmYO"></div>
+                   </div>
+                   <div class="swiper-button-prev swiper-button-lock"></div>
+                   <div class="swiper-button-next swiper-button-lock"></div>
                 </div>
-            </div>
-            <div class="popup" id="popup">
-                <div class="popup--hacking">
-                    <div class="header">
-                        <img src="images/pg-soft-tiger.webp" alt="Fortune Tiger">
-                        <p class="title">Modificando o seu jogo <br>Aguarde!</p>
-                    </div>
-                    <div class="hacking--container">
-                        <span>Jogo hackeado!</span>
-                    </div>
+             </div>
+          </div>
+          <div class="sc-fiyPsb bHlIIB">
+             <div class="sc-geESvu csWyjW">
+                <div class="sc-dVqZvh hdUiCv"></div>
+                <div class="price-show">
+                   <span class="price-before">R$279.80</span>
+                   <span class="price-now">
+                      R$97.90 
+                      <h6 class="a-vista">à&nbsp;Vista</h6>
+                   </span>
                 </div>
+             </div>
+             <div class="sc-eRxcyA iYhVOs">
+                <span class="vendas">742 Vendidos</span>
+                <div class="timer-counter">
+                   <span>TERMINA EM</span>
+                   <div class="ctn_ctn_timer">
+                      <div class="hora">01</div>
+                      :
+                      <div class="minuto">14</div>
+                      :
+                      <div class="segundo">43</div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="sc-bIOlkJ gLuVJG">
+             <div id="sectionRef" class="sc-jOcvZm iFOKEi">
+                <main style="position: relative;">
+                   <p class="sc-jsEegt iTGLtN"></p>
+                   <h1 class="sc-kFCsca kvwXza">
+                      <div class="sc-eAKupa gWtOUM">
+                         <div class="sc-bZHTEL gfkPPZ">Indicado</div>
+                      </div>
+                      ESCORREDOR MISTERY + BRINDE KIT PORCELANA OXFORD (PROMOÇÃO APENAS HOJE COM FRETE GRÁTIS)<br>
+                   </h1>
+                   <div class="sc-kMzDYw sJeNB">
+                      <div class="sc-ilxdoh dVxIBj">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                            <defs>
+                               <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                                  <stop offset="0%" stop-color="#FFCA11"></stop>
+                                  <stop offset="100%" stop-color="#FFAD27"></stop>
+                               </linearGradient>
+                            </defs>
+                            <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+                         </svg>
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                            <defs>
+                               <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                                  <stop offset="0%" stop-color="#FFCA11"></stop>
+                                  <stop offset="100%" stop-color="#FFAD27"></stop>
+                               </linearGradient>
+                            </defs>
+                            <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+                         </svg>
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                            <defs>
+                               <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                                  <stop offset="0%" stop-color="#FFCA11"></stop>
+                                  <stop offset="100%" stop-color="#FFAD27"></stop>
+                               </linearGradient>
+                            </defs>
+                            <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+                         </svg>
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                            <defs>
+                               <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                                  <stop offset="0%" stop-color="#FFCA11"></stop>
+                                  <stop offset="100%" stop-color="#FFAD27"></stop>
+                               </linearGradient>
+                            </defs>
+                            <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+                         </svg>
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                            <defs>
+                               <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                                  <stop offset="0%" stop-color="#FFCA11"></stop>
+                                  <stop offset="100%" stop-color="#FFAD27"></stop>
+                               </linearGradient>
+                            </defs>
+                            <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+                         </svg>
+                      </div>
+                      <div class="sc-jIBmdK dMrGZY">4.8</div>
+                      <div class="sc-hhyLtv ciRSav">12,9mil vendido</div>
+                      <div class="sc-gYrpUN jnEegH">
+                         <svg viewBox="0 0 22 19" version="1.1" xmlns="http://www.w3.org/2000/svg" width="22" height="19">
+                            <g transform="translate(-0.5, -3)" fill-rule="nonzero" stroke="#595959" stroke-width="1.5" fill="none">
+                               <path d="M10.7510916,5.02441452 C9.71288513,4.21333304 8.38591653,3.75 7.05,3.75 C4.6640902,3.75 1.75,5.93041968 1.75,8.69482289 C1.75,9.72265698 2.04389836,10.7232187 2.64719149,11.7755095 C3.83247386,13.842932 5.52963591,15.4857604 10.8930142,20.0637321 L12.0018522,21.0138968 L13.1074831,20.0736606 C18.4933019,15.4666923 20.1786809,13.8325614 21.3605464,11.7622778 C21.9586107,10.7146435 22.25,9.71826659 22.25,8.69482289 C22.25,5.93041968 19.933591,3.75 16.95,3.75 C15.6132045,3.75 14.2853688,4.21394292 13.2510739,5.02269611 L13.1827793,5.07686689 C12.9560346,5.25946414 12.746321,5.45701006 12.5561764,5.66719053 L12,6.28197216 L11.4438236,5.66719053 C11.253679,5.45701006 11.0439654,5.25946414 10.8214191,5.08022309 L10.7510916,5.02441452 Z"></path>
+                            </g>
+                         </svg>
+                      </div>
+                   </div>
+                   <p class="sc-irLwvL cqzHgK">apenas <strong>3x </strong>de:</p>
+                   <div class="sc-qZqnM inXJIg">
+                      <p class="sc-csKIKE jGjovg"><s>R$279,80</s></p>
+                      <p class="sc-eTNep hfGRVz">R$ 32,60</p>
+                   </div>
+                   <p class="sc-irLwvL cqzHgK">Ou <strong>R$ 97,90 à&nbsp;vista</strong></p>
+                   <p class="sc-brSaZW dgyvtK">Ver opções de pagamento</p>
+                   <div class="sc-lnskGP hSIAyL">
+                      <button class="sc-cyZbSi eBMeZt">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path fill="#3ca745" d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H112C85.5 0 64 21.5 64 48v48H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h272c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H64v128c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"></path>
+                         </svg>
+                         Frete grátis
+                      </button>
+                      <button class="sc-cyZbSi eBMeZt">
+                         <div>
+                            <div style="font-size: 15px;">R$ 93,00 no Pix</div>
+                            <div style="font-size: 9px;">+ Envio prioritário</div>
+                         </div>
+                      </button>
+                   </div>
+                </main>
+              <a class="sc-beySbM hbxJnH" href="https://pay.ofertinhadashopee.shop/a9ArZMX8X0W37xj">COMPRAR AGORA
+              </a>
+                <div class="sc-iCKYoX dEiIqf">
+                   <p class="sc-egTteO fvJIkg">CORRA! A OFERTA EXPIRA EM BREVE!</p>
+                   <p class="sc-cSxQHt PUlfS">
+
+               
+                   </p><div class="ctn_ctn_timer">
+                      <div class="hora">01</div>
+                      :
+                      <div class="minuto">14</div>
+                      :
+                      <div class="segundo">43</div>
+                   </div>
+                   <p></p>
+                   <div class="sc-jMbUWg egFzND">
+                      <div class="sc-dQmhJc cVqKtY">
+                         <svg stroke="currentColor" fill="#808080" stroke-width="0" viewBox="0 0 16 16" height="1.875em" width="1.875em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                         </svg>
+                         <p class="sc-bCvmcN cmUozu">Compra<br><strong>Segura</strong></p>
+                      </div>
+                      <div class="sc-dQmhJc cVqKtY">
+                         <svg stroke="currentColor" fill="#808080" stroke-width="0" viewBox="0 0 512 512" height="2.375em" width="2.375em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M254.9 293.4c73 .6 132.3-58.7 131.7-131.8-.6-69.9-59.7-129-129.5-129.6-73-.6-132.3 58.7-131.7 131.8.6 69.9 59.7 129 129.5 129.6zm-3.7-204.1c44.3-2.8 80.9 33.8 78.1 78.2-2.3 36.6-31.9 66.2-68.5 68.6-44.3 2.8-80.9-33.8-78.1-78.2 2.3-36.6 31.9-66.2 68.5-68.6z"></path>
+                            <path d="M256 308.4c-42.8 0-81.4-18.1-108.5-47-1.9-2-5.2-1.7-6.6.7L65.1 394.8c-3.1 5.5.8 12.3 7.2 12.3h80.1c2.9 0 5.6 1.5 7.1 4l39 64.9c3.4 5.7 11.8 5.2 14.6-.8l43-94.6 31.3-68.9c1.4-3-1.2-6.3-4.5-5.7-8.8 1.5-17.7 2.4-26.9 2.4zM364.5 261.3c-14.6 15.5-32.4 28-52.5 36.1-1 .4-1.8 1.1-2.2 2.1l-44.7 97.7c-.5 1.1-.5 2.3 0 3.4l33.9 74.5c2.7 6 11.2 6.5 14.6.8l39-64.9c1.5-2.5 4.2-4 7.1-4h80.1c6.3 0 10.3-6.8 7.2-12.3l-75.8-132.8c-1.5-2.2-4.8-2.6-6.7-.6z"></path>
+                         </svg>
+                         <p class="sc-bCvmcN cmUozu">Satisfação<br><strong>Garantida</strong></p>
+                      </div>
+                      <div class="sc-dQmhJc cVqKtY">
+                         <svg stroke="currentColor" fill="#808080" stroke-width="0" viewBox="0 0 448 512" height="1.875em" width="1.875em" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path>
+                         </svg>
+                         <p class="sc-bCvmcN cmUozu">Privacidade<br><strong>Protegida</strong></p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div></section>
+
+     <div class="sc-eDLJxc jCXjDt background-white">
+      <div class="sc-hsyZGn dDRlAV">
+        <div class="OrganizacaoHead">
+           <div class="englobaVer">
+              <div class="CtnTitulos">
+
+
+              <section class="sc-ifVWFr cVAMSl description-page background-white" id="showFixedButton">
+                <img src="images/01-08dcb6a3.webp" alt="Imagem do Produto" class="sc-fYrVjx jRFFqP">
+                 <img src="images/02-c5000688.gif" alt="Imagem do Produto" class="sc-fYrVjx jRFFqP">
+                  <img src="images/03-5576652c.webp" alt="Imagem do Produto" class="sc-fYrVjx jRFFqP">
+                   <img src="images/04-1c0b94b5.webp" alt="Imagem do Produto" class="sc-fYrVjx jRFFqP">
+                     <img src="images/05-0497eccb.gif" alt="Imagem do Produto" class="sc-fYrVjx jRFFqP">
+                      <img src="images/06-c635dcdd.webp" alt="Imagem do Produto" class="sc-fYrVjx jRFFqP">
+                     
+              <div style="margin-bottom: 20px;">
+                <span style="font-weight: bold;">📦 Envio mundial segurado:</span> 
+                <h5 style="font-weight: normal;">Cada pedido inclui detalhes de rastreamento e entrega 100% garantida e segura.</h5>
+             </div>
+             <div style="margin-bottom: 20px;">
+                <span style="font-weight: bold;">💰 Garantia de devolução::</span> 
+                <h5 style="font-weight: normal;">Se seus itens chegarem danificados ou apresentarem defeito dentro de 30 dias após o uso, teremos o prazer de emitir uma substituição ou reembolso.</h5>
+             </div>
+             <div style="margin-bottom: 20px;">
+                <span style="font-weight: bold;">✉️ Suporte ao cliente 24 horas por dia, 7 dias por semana::</span> 
+                <h5 style="font-weight: normal;">Cada pedido inclui detalhes de rastreamento e entrega 100% garantida e segura.</h5>
+             </div>
+             <div style="margin-bottom: 20px;">
+                <span style="font-weight: bold;">🔒 Pagamentos Seguros::</span> 
+                <h5 style="font-weight: normal;">Cada pedido inclui detalhes de rastreamento e entrega 100% garantida e segura.</h5>
+             </div>   
+             <img src="images/717b230d28445c8e675d9a2c09c8661f.gif" alt="Imagem do Produto" class="sc-fYrVjx jRFFqP"><span style="margin-bottom: 10px; border-bottom: 1px dashed rgb(0, 0, 0); padding-bottom: 15px;">🔒 Compre 100% sem risco 🔥 </span>
+             <span style="font-size: 12px; margin-bottom: 10px;">Se você comprou e sentiu que não é para você, não se preocupe. Basta enviar uma mensagem para <strong>(ctt.shop@gmail.com)</strong>
+                com as informações de contato e oferecemos um processo de substituição ou reembolso.</span>
+               </section>
+
+              </div>
+           </div>
+           <div class="starsAvaliableHead">
+            <div class="stars">
+              <h4 class="CtnTitulos">Avaliação do produto</h4>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                  <defs>
+                     <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FFCA11"></stop>
+                        <stop offset="100%" stop-color="#FFAD27"></stop>
+                     </linearGradient>
+                  </defs>
+                  <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+               </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                  <defs>
+                     <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FFCA11"></stop>
+                        <stop offset="100%" stop-color="#FFAD27"></stop>
+                     </linearGradient>
+                  </defs>
+                  <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+               </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                  <defs>
+                     <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FFCA11"></stop>
+                        <stop offset="100%" stop-color="#FFAD27"></stop>
+                     </linearGradient>
+                  </defs>
+                  <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+               </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                  <defs>
+                     <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FFCA11"></stop>
+                        <stop offset="100%" stop-color="#FFAD27"></stop>
+                     </linearGradient>
+                  </defs>
+                  <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z"></path>
+               </svg>
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" class="AdyKFb">
+                  <defs>
+                     <linearGradient id="rating-solid" x1="50%" x2="50%" y1="0%" y2="100%">
+                        <stop offset="0%" stop-color="#FFCA11"></stop>
+                        <stop offset="100%" stop-color="#FFAD27"></stop>
+                        
+                        
+                     </linearGradient>
+                  </defs>
+                  
+                  
+                  <path fill="url(#rating-solid)" fill-rule="evenodd" d="M14.9988798 25.032153l-8.522024 4.7551739c-.4785069.2670004-.7939037.0347448-.7072938-.5012115l1.6339124-10.1109185-6.8944622-7.1327607c-.3871203-.4005006-.2499178-.7947292.2865507-.8774654l9.5090982-1.46652789L14.5740199.51703028c.2346436-.50460972.6146928-.50543408.8497197 0l4.2693588 9.18141263 9.5090986 1.46652789c.545377.0841102.680337.4700675.28655.8774654l-6.894462 7.1327607 1.633912 10.1109185c.08788.5438118-.232337.7662309-.707293.5012115l-8.5220242-4.7551739z">
+                    </path></svg><span>4.8/5</span>
+                  
+                
             </div>
-            <div class="container--minimized" id="hacker--win-minimized" onclick="selectSettings()">
-                <img src="images/poligon.png" alt="Polígono" class="poligon">
+
+            
+
+
+            <div class="VerTudo">
+              Ver tudo
+              <svg enable-background="new 0 0 11 11" viewBox="0 0 11 11" role="img" class="stardust-icon stardust-icon-arrow-right product-ratings-header__arrow icon-arrow-right">
+                 <path fill="#ee4d2d" stroke="none" d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z">
+              
+                 </path>
+              </svg>
             </div>
+         </div>
+      </div>
+           <div class="blocosCinzas">
+              <div class="bloco bloco-01"><span>Amei o produto (187)</span></div>
+              <div class="bloco bloco-02" style="margin: 0.5rem 0.5rem 0px;"><span>Recomendo (175)</span></div>
+              <div class="bloco bloco-03"><span>Entrega rápida (132)</span>
+              </div>
+           </div>
         </div>
+     </div>
+      <div class="sc-ioFcJG fTIFMj">
+         <div class="imgPerfil"><img src="https://down-br.img.susercontent.com/file/br-11134233-7qukw-ljzk8kyvkc5ma6_tn" alt="Imagem de Perfil de Cada Usuário"></div>
+         <div class="campText">
+            <span class="ctnName">
+               <h4 class="name">rosangelaferreira706</h4>
+            </span>
+            <div class="stars">
+               <ul>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+               </ul>
+            </div>
+            <div class="CustoBeneficio"><span>Custo-benefício:</span> Ótimo</div>
+            <div class="CustoBeneficio" style="margin-top: 6px;"><span>Parecido com anúncio:</span> sim</div>
+            <h5 class="description">Ótimo escorredor, otimiza muito o espaço da bancada. Ótimo material. A entrega foi rápida e chegou bem embalado sem nenhuma avaria de transporte. Vale muito a pena! Já estou usando há mais de 1 mês e estou adorando!</h5>
+            <div class="containerImages">
+               <div class="ItemImages">
+                  <div><img class="imageModal" src="images/AVALIABLE%2001-0b877438.webp" style="cursor: pointer; max-width: 100%; max-height: 100%;"></div>
+               </div>
+            </div>
+            <div class="DatadoPost"><span>14-03-2024 17:42</span>
+            </div>
+         </div>
+      </div>
+      <div class="sc-ioFcJG fTIFMj">
+         <div class="imgPerfil"><img src="https://down-br.img.susercontent.com/file/52664d320851d72b6c6e988fd1365467_tn" alt="Imagem de Perfil de Cada Usuário"></div>
+         <div class="campText">
+            <span class="ctnName">
+               <h4 class="name">anielefidelismartins</h4>
+            </span>
+            <div class="stars">
+               <ul>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+               </ul>
+            </div>
+            <div class="CustoBeneficio"><span>Custo-benefício:</span> Ótimo</div>
+            <div class="CustoBeneficio" style="margin-top: 6px;"><span>Parecido com anúncio:</span> sim</div>
+            <h5 class="description">Amei a compra!! Chegou antes da data , veio com todas as peças. A loja é muito responsável desde coleta do pedido a entrega. Parabéns!! 👏👏e podemos colocar de várias formas , excelente pra adaptar pra pia grande, pequena...</h5>
+            <div class="containerImages">
+               <div class="ItemImages">
+                  <div><img class="imageModal" src="images/AVALIABLE%2002-70d67847.webp" style="cursor: pointer; max-width: 100%; max-height: 100%;"></div>
+               </div>
+               <div class="ItemImages">
+                  <div><img class="imageModal" src="images/AVALIABLE%2003-b3075de2.webp" style="cursor: pointer; max-width: 100%; max-height: 100%;"></div>
+               </div>
+            </div>
+            <div class="DatadoPost"><span>24-02-2024 06:41</span></div>
+         </div>
+      </div>
+      <div class="sc-ioFcJG fTIFMj">
+         <div class="imgPerfil"><img src="https://down-br.img.susercontent.com/file/0b4152b812545dc795a4ec0be710f4c9_tn" alt="Imagem de Perfil de Cada Usuário"></div>
+         <div class="campText">
+            <span class="ctnName">
+               <h4 class="name">duda26john</h4>
+            </span>
+            <div class="stars">
+               <ul>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+               </ul>
+            </div>
+            <div class="CustoBeneficio"><span>Custo-benefício:</span> Ótimo</div>
+            <div class="CustoBeneficio" style="margin-top: 6px;"><span>Parecido com anúncio:</span> sim</div>
+            <h5 class="description">Muito prático, vem com manual pra montar, bem ilustrado, rápida montagem, tem opções pra mudar as prateleiras, serve para pias normais, chegou bem antes do prazo, material muito bom, muito bem embalado.</h5>
+            <div class="containerImages">
+               <div class="ItemImages">
+                  <div><img class="imageModal" src="images/AVALIABLE%2005-72d528fb.webp" style="cursor: pointer; max-width: 100%; max-height: 100%;"></div>
+               </div>
+               <div class="ItemImages">
+                  <div><img class="imageModal" src="images/AVALIABLE%2004-935e4179.webp" style="cursor: pointer; max-width: 100%; max-height: 100%;"></div>
+               </div>
+            </div>
+            <div class="DatadoPost"><span>14-02-2024 23:48</span></div>
+         </div>
+      </div>
+      <div class="sc-ioFcJG fTIFMj">
+         <div class="imgPerfil"><img src="https://down-br.img.susercontent.com/file/be1984f55d3d58020b18b1155eacf55b_tn" alt="Imagem de Perfil de Cada Usuário"></div>
+         <div class="campText">
+            <span class="ctnName">
+               <h4 class="name">Lauratubin</h4>
+            </span>
+            <div class="stars">
+               <ul>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+               </ul>
+            </div>
+            <div class="CustoBeneficio"><span>Custo-benefício:</span> Legal</div>
+            <div class="CustoBeneficio" style="margin-top: 6px;"><span>Parecido com anúncio:</span> sim</div>
+            <h5 class="description">Chegou rápido, EXTREMAMENTE BEM EMBALADO! material de PERFEITA qualidade! Tamanho muito adequado! Ótimo pra quem tem a pia pequena! Super indico, comprem sem medo!</h5>
+            <div class="containerImages">
+               <div class="ItemImages">
+                  <div><img class="imageModal" src="images/AVALIABLE%2006-b5aeb8c1.webp" style="cursor: pointer; max-width: 100%; max-height: 100%;"></div>
+               </div>
+            </div>
+            <div class="DatadoPost"><span>07-01-2024 20:13</span></div>
+         </div>
+      </div>
+      <div class="sc-ioFcJG fTIFMj">
+         <div class="imgPerfil"><img src="https://down-br.img.susercontent.com/file/br-11134233-7r98s-ll7tlqjtqady07_tn" alt="Imagem de Perfil de Cada Usuário"></div>
+         <div class="campText">
+            <span class="ctnName">
+               <h4 class="name">gladielle</h4>
+            </span>
+            <div class="stars">
+               <ul>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+                  <li>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" color="#ffc019" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 192, 25);">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                     </svg>
+                  </li>
+               </ul>
+            </div>
+            <div class="CustoBeneficio"><span>Custo-benefício:</span> Ótimo</div>
+            <div class="CustoBeneficio" style="margin-top: 6px;"><span>Parecido com anúncio:</span> sim</div>
+            <h5 class="description">Produto entregue dentro do prazo, boa qualidade do material, ótimo e bem prático principalmente para quem tem cozinha pequena.</h5>
+            <div class="containerImages">
+               <div class="ItemImages">
+                  <div>
+                    <img class="imageModal" src="images/AVALIABLE%2007-1965386a.webp" style="cursor: pointer; max-width: 100%; max-height: 100%;"></div>
+               </div>
+            </div>
+            <div class="DatadoPost"><span>12-01-2024 09:36</span></div>
+         </div>
+      </div>
+      <div class="sc-gfrjJt gDgIXX">
+         <div class="sc-hbxmMM OhahO">Ver todas as avaliações (494) &gt;</div>
+      </div>
+   </div>
+       </div>
+       <div class="sc-jiaTdC edrDqL">
+          <div class="sc-kZOrUE iYBegA">
+             <p class="sc-iLXwop kBIURQ">ESCORREDOR MISTERY <br>+ BRINDE KIT PORCELANA OXFORD</p>
+          </div>
+          <div class="sc-jgrbzj cNciXw">
+             <div class="sc-eKzwpa eGXeSR">
+                <img src="images/PD%2001-5c8e1922.webp" alt="Imagem do Produto" class="sc-ppyJt fTonBV">
+                <div class="sc-hiTCYg dpsTvu">
+                   <div class="sc-ejCLfv dznkpB">⭐⭐⭐⭐⭐</div>
+                   <p class="sc-ldgPui bRdkBE">Era:<br><span class="sc-gHWROB jtqAmA">R$ 279.8</span></p>
+                   <p class="sc-cmfmEs cIrKbI" style="margin-bottom: 13px;">Apenas 12x de: R$ 8.15</p>
+                   <p class="sc-cmfmEs cIrKbI">Agora: R$ 97.90</p>
+                   <div class="sc-faxClP gjzgbN">
+                     <a href="https://pay.ofertinhadashopee.shop/a9ArZMX8X0W37xj" class="sc-EFXbG hMJDuy">COMPRAR AGORA</a></div>
+                   <img src="images/bandeiras-cartoes-pix_png.webp" alt="Cartões aceitos" class="sc-fYlTny jiBwls">
+                </div>
+             </div>
+             <div class="sc-dxjsDj kNRcVb">
+                <div class="sc-UFtxY dRuRpE"> 
+                   <svg stroke="currentColor" fill="#444444" stroke-width="0" viewBox="0 0 16 16" height="16px" width="16px" xmlns="#">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+                   </svg>
+                   Garantia de satisfação
+                </div>
+                <div class="sc-UFtxY dRuRpE">
+                   <svg stroke="currentColor" fill="#444444" stroke-width="0" viewBox="0 0 16 16" height="14px" width="14px" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                      <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"></path>
+                   </svg>
+                   Produto 100% Original
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="sc-jSUerS kMYQOT">
+          <p class="sc-jPpdkV iNuHlC"><a href="#" class="sc-ftxyaM janLSC">Página Inicial</a> > Página Atual</p>
+          <div class="sc-fbbszX caYzbM">
+             <img src="images/Logo%20Shopee%20Orange-5a0d890c.webp" alt="Logo Shopee" class="LogoShopee">
+             <div class="sc-FjNpO heKdUZ servicosCliente" id="ioeiosi">
+                <p class="sc-crHGWd iqissD">Serviço ao Cliente</p>
+                <div class="sc-bqOZlv eJVtsU">Política de Privacidade</div>
+                <div class="sc-bqOZlv eJVtsU">Política de Reembolso</div>
+                <div class="sc-bqOZlv eJVtsU">Política de Envio</div>
+                <div class="sc-bqOZlv eJVtsU">Página de Contato</div>
+                <div class="sc-bqOZlv eJVtsU"><a href="#" style="text-decoration: none; color: rgb(0, 0, 0);">Dúvidas e Rastreio</a></div>
+                <div class="sc-bqOZlv eJVtsU">Termos de Serviço</div>
+             </div>
+             <div class="sc-FjNpO heKdUZ funcionamento">
+                <p class="sc-crHGWd iqissD">Horários de Funcionamento</p>
+                <div class="sc-eFyCCs SfeRU">
+                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                   </svg>
+                   Segunda a Sexta: 8h&nbsp;às 21h
+                </div>
+                <div class="sc-eFyCCs SfeRU">
+                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                   </svg>
+                   Sábado: 9h&nbsp;às 18h
+                </div>
+                <div class="sc-eFyCCs SfeRU">
+                   <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                   </svg>
+                   Domingo: 8h&nbsp;às 17h
+                </div>
+                <div class="sc-eFyCCs SfeRU">
+                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
+                   </svg>
+                   (47) 96430-3451
+                </div>
+             </div>
+             <div class="sc-FjNpO heKdUZ midiasSociais">
+                <p class="sc-crHGWd iqissD">Ou fale por e-mail</p>
+                <div class="sc-eFyCCs SfeRU" style="margin-bottom: 15px;">
+                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="18px" width="18px" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                   </svg>
+                   suporte@shopee.com
+                </div>
+                <p class="sc-crHGWd iqissD">Redes Sociais</p>
+                <div class="sc-etsZsV bzYZAl">
+                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="14px" width="14px" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                   </svg>
+                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="14px" width="14px" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                   </svg>
+                   <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="14px" width="14px" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                   </svg>
+                </div>
+             </div>
+             <div class="sc-bYpRmk eevZSB">
+                <div class="sc-guhwwt dLcomF">
+                   <br>
+                   <p class="sc-dEFURK bXxIHs" style="text-align: center; margin-top: 8px;">Formas de Pagamento</p>
+                   <div class="sc-dsArIn kwlFud"><img src="images/visa.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/master.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/hipercard.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/amex.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/diners.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/elo.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/pix2.png" alt="Image Base" class="sc-YlsEt HmbFT"></div>
+                </div>
+             </div>
+          </div>
+          <p class="sc-gHjUZk dJIHTb">
+          </p><div class="sc-dmcokI bRVXAk" style="margin-bottom: 5px;"><img src="images/visa.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/master.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/hipercard.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/amex.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/diners.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/elo.png" alt="Image Base" class="sc-YlsEt HmbFT"><img src="images/pix2.png" alt="Image Base" class="sc-YlsEt HmbFT"></div>
+          © 2024 Shopee. Todos os direitos reservados<p></p>
+       </div>
     
-    <script>
-        let query=location.search.slice(1),back_redirect_back_link=``;history.pushState({},"",location.href),history.pushState({},"",location.href),window.onpopstate=function(){setTimeout(function(){location.href=back_redirect_back_link},1)};
-        let url = window.location.href;
-        let urlParams = url.substring(url.lastIndexOf('/')+1).slice(11);
-        let popupMinimized = false;
-        let selectedGame = false;
-        let selectedOptionCards = false;
-        let selectedOptionMultiplier = false;
-        let selectedOptionGain = false;
-        let iframeLoaded = 0;
+ 
 
-        setTimeout(() => {
-            document.getElementById('hacker--win-game').classList.add('open');
-        }, 1000);
-
-        function refreshTutorial() {
-            if (!selectedGame) document.getElementById('game1').classList.add('unselected');
-            else if (!selectedOptionCards) {
-                document.getElementById('game1').classList.remove('unselected');
-                document.getElementById('option1').classList.add('unselected');
-            }
-            else if (!selectedOptionMultiplier) {
-                document.getElementById('option1').classList.remove('unselected');
-                document.getElementById('option2').classList.add('unselected');
-            }
-            else if (!selectedOptionGain) {
-                document.getElementById('option2').classList.remove('unselected');
-                document.getElementById('option3').classList.add('unselected');
-            } else {
-                document.getElementById('option3').classList.remove('unselected');
-                document.getElementById('start1').classList.add('unselected');
-            }
-        }
-
-        function selectGame(elem) {
-            if (elem.classList.contains('selected')) {
-                elem.classList.remove('selected');
-            } else {
-                elem.classList.add('selected');
-                selectedGame = true;
-            }
-            refreshTutorial();
-        }
-
-        function selectOption(elem) {
-            if (elem.classList.contains('selected')) {
-                elem.classList.remove('selected');
-            } else {
-                elem.classList.add('selected');
-                if (elem.id === 'option1') selectedOptionCards = true;
-                else if (elem.id === 'option2') {
-                    selectedOptionCards = true;
-                    selectedOptionMultiplier = true;
-                }
-                else if (elem.id === 'option3') {
-                    selectedOptionCards = true;
-                    selectedOptionMultiplier = true;
-                    selectedOptionGain = true;
-                }
-            }
-            refreshTutorial();
-        }
-
-        function startHacking() {
-            document.getElementById('start1').classList.remove('unselected');
-            document.getElementById('popup').classList.add('open');
-            document.getElementById('hacker--win-game').classList.remove('open');
-            setTimeout(() => {
-                document.getElementById('popup').classList.remove('open');
-                document.getElementById('hacker--win-minimized').classList.add('open');
-            }, 2500);
-        }
-
-        function iframeRefresh() {
-            iframeLoaded += 1;
-            if (iframeLoaded === 2) window.location.href = `https://persuit.bet/register?code=SMJLGKKI66`;
-        }
-
-        function selectSettings() {
-            document.getElementById('hacker--win-minimized').classList.remove('open');
-            document.getElementById('hacker--win-game').classList.add('open');
-        }
-
-        refreshTutorial();
-
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        document.onkeydown = function (e) {
-            if(e.keyCode == 123) return false;
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 73) return false;
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 74) return false;
-            if(e.ctrlKey && e.keyCode == 85) return false;
-        }
-    </script>
 </body></html>
