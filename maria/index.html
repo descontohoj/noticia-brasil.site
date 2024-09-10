@@ -604,14 +604,12 @@ src="https://www.facebook.com/tr?id=358773080107127&ev=PageView&noscript=1"
         }
     </style>
 </head>
-<body data-rsssl=1>
-    <div class="button-container">
-        <button class="button" onclick="verificarDisponibilidade()" aria-busy="false">Clique aqui para verificar a disponibilidade</button>
-    </div>
-    <div class="loader" id="loader" role="status" aria-live="polite" aria-hidden="true"></div>
-    <div class="loading-message" id="loading-message">Consultando estoque, aguarde...</div>
-    <div class="message" id="message" aria-live="polite"><b>Restam apenas <u>6</u> unidades</b><br>Limite de uma compra por cliente</div>
-    <div class="content" id="content"></div>
+<body>
+    <button class="button" onclick="verificarDisponibilidade()">Verificar Disponibilidade</button>
+    <div id="loader">Carregando...</div>
+    <div id="loading-message">Por favor, aguarde...</div>
+    <div id="message">Conteúdo carregado</div>
+    <div id="content"></div>
 
     <script>
         function verificarDisponibilidade() {
@@ -620,16 +618,14 @@ src="https://www.facebook.com/tr?id=358773080107127&ev=PageView&noscript=1"
             var loadingMessage = document.getElementById('loading-message');
             var message = document.getElementById('message');
             var content = document.getElementById('content');
+
             button.style.display = 'none';
-            button.setAttribute('aria-busy', 'true');
             loader.style.display = 'block';
-            loader.setAttribute('aria-hidden', 'false');
             loadingMessage.style.display = 'block';
-            
+
             // Simulação de atraso para exibir o loader por 3 segundos:
             setTimeout(function() {
                 loader.style.display = 'none';
-                loader.setAttribute('aria-hidden', 'true');
                 loadingMessage.style.display = 'none';
                 message.style.display = 'block';
 
@@ -640,8 +636,7 @@ src="https://www.facebook.com/tr?id=358773080107127&ev=PageView&noscript=1"
                         content.innerHTML = data;
                         content.style.display = 'block';
                     })
-                    .catch(error => {
-                        console.error('Error fetching the content:', error);
+                    .catch(() => {
                         content.innerHTML = '<p>Erro ao carregar o conteúdo.</p>';
                         content.style.display = 'block';
                     });
